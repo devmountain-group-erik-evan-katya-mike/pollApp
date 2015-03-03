@@ -1,0 +1,31 @@
+{
+  "name": "pollApp",
+  "version": "1.0.0",
+  "description": "erik test",
+  "main": "server.js",
+  "dependencies": {
+    "body-parser": "^1.12.0",
+    "express": "^4.12.2",
+    "fs": "0.0.2",
+    "http": "0.0.0",
+    "mongoose": "^3.8.24",
+    "passport": "^0.2.1",
+    "q": "^1.2.0",
+    "socket.io": "^1.3.5"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/devmountain-group-erik-evan-katya-mike/pollApp.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/devmountain-group-erik-evan-katya-mike/pollApp/issues"
+  },
+  "homepage": "https://github.com/devmountain-group-erik-evan-katya-mike/pollApp"
+}
