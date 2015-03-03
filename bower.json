@@ -1,0 +1,21 @@
+{
+  "name": "pollApp",
+  "version": "0.0.0",
+  "homepage": "https://github.com/devmountain-group-erik-evan-katya-mike/pollApp",
+  "authors": [
+    "erikanderson <edawebdesign@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.2",
+    "angular": "~1.3.14",
+    "angular-ui-router": "~0.2.13"
+  }
+}
