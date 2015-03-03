@@ -3,7 +3,7 @@ var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 var passport = require('passport');
 var io = require('socket.io');
-var q = require('q');
+
 
 var app = express();
 
