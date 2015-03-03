@@ -4,21 +4,23 @@
     <meta charset="UTF-8">
     <!-- CSS -->
     <link rel="stylesheet" href="assets/libs/bootstrap/dist/css/bootstrap.min.css">
+
     <!-- JS / LIBS -->
     <script src="assets/libs/angular/angular.min.js"></script>
     <script src="assets/libs/angular-ui-router/release/angular-ui-router.min.js"></script>
+   <script type="text/javascript" src="assets/libs/socket.io.js"></script>
     <!-- APP -->
+    <script src="app/main/app.js"></script>
     <script src="app/controllers/mainCtrl.js"></script>
     <script src="app/controllers/loginCtrl.js"></script>
     <script src="app/controllers/dashboardCtrl.js"></script>
     <script src="app/services/mainService.js"></script>
     <script src="app/services/dashboardService.js"></script>
     <script src="app/services/loginService.js"></script>
-    <script src="app/main/app.js"></script>
-    <script type="text/javascript" src="assets/libs/socket.io.js"></script>
+
     
   </head>
-  <body ng-app="pollApp" ng-controller="pollApp">
+  <body ng-app="pollApp" ng-controller="mainCtrl">
 
   <nav class="navbar navbar-default">
       <div class="container-fluid">
@@ -51,6 +53,7 @@
   <ui-view>
   </ui-view>
 
+  <div class="container">
 <form>
   <div class="form-group">
     <label for="pollTitle">Poll Title</label>
@@ -58,25 +61,24 @@
   </div>
   <div class="form-group">
     <label for="optionOne">1.</label>
-    <input type="text" class="form-control" id="options" placeholder="Enter poll option" ng-submit="Opt1" ng-model="Opt1">
+    <input type="text" class="form-control" id="options" placeholder="Enter poll option"  ng-model="choice1">
   </div>
   <div class="form-group">
     <label for="optionTwo">2.</label>
-    <input type="text" class="form-control" id="options" placeholder="Enter poll option" ng-submit="Opt2" ng-model="Opt2">
+    <input type="text" class="form-control" id="options" placeholder="Enter poll option" ng-model="choice2">
   </div>
   <div class="form-group">
     <label for="optionThree">3.</label>
-    <input type="text" class="form-control" id="options" placeholder="Enter poll option" ng-submit="Opt3" ng-model="Opt3">
+    <input type="text" class="form-control" id="options" placeholder="Enter poll option" ng-model="choice3">
   </div>
   <div class="form-group">
     <label for="optionFour">4.</label>
-    <input type="text" class="form-control" id="options" placeholder="Enter poll option" ng-submit="Opt4" ng-model="Opt4">
+    <input type="text" class="form-control" id="options" placeholder="Enter poll option" ng-model="choice4">
   </div>
 
-  </div>
-  <button type="submit" class="btn btn-default" ng-Click="createPoll(Opt1)">Submit</button>
+  <button type="submit" class="btn btn-default" ng-Click="createPoll()">Submit</button>
 </form>
-
+</div>
 
 
   </body>
