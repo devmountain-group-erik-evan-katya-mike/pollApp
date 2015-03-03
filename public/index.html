@@ -6,13 +6,50 @@
     <link rel="stylesheet" href="assets/libs/bootstrap/dist/css/bootstrap.min.css">
     <!-- JS / LIBS -->
     <script src="assets/libs/angular/angular.min.js"></script>
-    <script src="assets/libs/angular-ui-router/release/angular-ui-router.min.js"</script>
+    <script src="assets/libs/angular-ui-router/release/angular-ui-router.min.js"></script>
     <!-- APP -->
     <script src="app/controllers/mainCtrl.js"></script>
-    <script src="app/app.routes.js"></script>
-    <script src="app/app.js"></script>
+    <script src="app/controllers/loginCtrl.js"></script>
+    <script src="app/controllers/dashboardCtrl.js"></script>
+    <script src="app/services/mainService.js"></script>
+    <script src="app/services/dashboardService.js"></script>
+    <script src="app/services/loginService.js"></script>
+    <script src="app/main/app.js"></script>
   </head>
   <body>
-  
+
+  <nav class="navbar navbar-default">
+      <div class="container-fluid">
+
+          <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+              </button>
+
+          </div>
+
+
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+              <ul class="nav navbar-nav">
+                  <li><a href="#">PollApp</a></li>
+
+              </ul>
+
+              <ul class="nav navbar-nav navbar-right">
+                  <li><a href="#">Login</a></li>
+
+              </ul>
+          </div>
+      </div>
+  </nav>
+
+  <ui-view>
+  </ui-view>
+
+
+
   </body>
 </html>
