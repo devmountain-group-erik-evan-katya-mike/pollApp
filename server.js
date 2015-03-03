@@ -20,9 +20,21 @@ db.once('open', function (callback) {
   console.log('the mongoose is loose');
 });
 
+io.on('connection', function(socket){
+	console.log('connected!')
+	socket.on('poll', function(options){
+		console.log(options)
+
+		// create new view
+
+	})
+})
+
 
 app.get('/api/poll/:_id', pollCtrl.get);
 app.post('/api/poll/', pollCtrl.post);
+
+
 
 
 
