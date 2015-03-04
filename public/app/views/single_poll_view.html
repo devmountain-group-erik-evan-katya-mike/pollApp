@@ -1,17 +1,19 @@
-
-{{poll.choices}}
-
 <div class="container">
 <div class="panel panel-default col-md-4">
     <div class="panel-heading"> <h3 class="panel-title">{{poll.title}}</h3></div>
 
     <div class="panel-body">
-       Created By: {{poll.owner}}
-        <form role="form" ng-repeat="choice in poll.choices">
-            <div class="radio">
-                <label><input type="radio" name="optradio">{{choice.body}}</label>
-            </div>
-        </form>
-    </div>
+       Created By: {{poll.owner}
+
+          <form>
+              Select One:
+              <br/>
+            <span ng-repeat="choice in poll.choices">
+              <input type="radio" name="name" ng-value="choice" ng-model="$parent.selectedChoice">{{choice.body}}<br/>
+            </span>
+            <button class="btn btn-primary" ng-click="castVote()">Cast Vote</button>
+          </form>
+  
+   </div>
 </div>
 </div>

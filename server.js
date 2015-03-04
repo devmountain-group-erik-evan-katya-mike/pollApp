@@ -96,8 +96,8 @@ io.on('connection', function(socket){
 
 
 app.get('/api/poll/:_id', pollCtrl.get);
+app.put('/api/poll/:_id', pollCtrl.put);
 app.post('/api/poll/', pollCtrl.post);
-
 
 
 
