@@ -4,10 +4,7 @@ app.controller("mainCtrl", function($scope, mainService) {
 
 
 
-	//var socket = io.connect();
-    //
-	//	$scope.Opt1 = options;
-	//	console.log('hello');
+	var socket = io.connect();
 
 		$scope.createPoll = function(){
             var newTitle = $scope.pollTitle;
@@ -19,6 +16,5 @@ app.controller("mainCtrl", function($scope, mainService) {
 			//socket.emit('poll', options);
 			//console.log(options);
 		};
-
 
 });
