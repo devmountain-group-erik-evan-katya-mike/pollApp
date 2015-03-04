@@ -42,45 +42,24 @@
           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 
               <ul class="nav navbar-nav navbar-right">
-                  <li><a ui-sref="dashboard">Dashboard</a></li>
-                  <li><a ui-sref="login"><img src="assets/images/Twitter-logo.png" class="loginImg">-Login</a></li>
+                  <li ng-show="user"><a ui-sref="dashboard">Dashboard</a></li>
+                  <li ng-hide="user"><a href="/auth/twitter"><img src="assets/images/Twitter-logo.png" class="loginImg">-Login</a></li>
+                  <li ng-show="user" ng-click="logout()"><a href=""><img src="assets/images/Twitter-logo.png" class="loginImg">-Logout</a></li>
               </ul>
           </div>
       </div>
   </nav>
 
-
-<div class="container containerHeight">
-  <!--<form>-->
-    <!--<div class="form-group">-->
-      <!--<label for="pollTitle">Poll Title</label>-->
-      <!--<input type="text" class="form-control" id="pollTitle" placeholder="Enter title" ng-model="pollTitle">-->
-    <!--</div>-->
-    <!--<div class="form-group">-->
-      <!--<label for="optionOne">1.</label>-->
-      <!--<input type="text" class="form-control" id="options" placeholder="Enter poll option"  ng-model="choice1">-->
-    <!--</div>-->
-    <!--<div class="form-group">-->
-      <!--<label for="optionTwo">2.</label>-->
-      <!--<input type="text" class="form-control" id="options" placeholder="Enter poll option" ng-model="choice2">-->
-    <!--</div>-->
-    <!--<div class="form-group">-->
-      <!--<label for="optionThree">3.</label>-->
-      <!--<input type="text" class="form-control" id="options" placeholder="Enter poll option" ng-model="choice3">-->
-    <!--</div>-->
-    <!--<div class="form-group">-->
-      <!--<label for="optionFour">4.</label>-->
-      <!--<input type="text" class="form-control" id="options" placeholder="Enter poll option" ng-model="choice4">-->
-    <!--</div>-->
-
-    <!--<button type="submit" class="btn btn-default" ng-Click="createPoll()">Submit</button>-->
-  <!--</form>-->
-</div>
-
   <div ui-view>
 
   </div>
 
-  <footer class="footerClass"></footer>
+
+<div class="container containerHeight">
+
+</div>
+
+
+<footer class="footerClass"></footer>
   </body>
 </html>

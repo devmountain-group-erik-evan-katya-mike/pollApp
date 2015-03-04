@@ -1,9 +1,20 @@
 <header class="dashboardHeader">
-    Dashboard header's width is 100%. Height is 10%;
+    <div class="container">
+        <div class="profilePicture">
+            <img src="{{ProfilePic}}" class="img-responsive">
+        </div>
+        <div>Dashboard is in a container Height is 80%;
+            <a ui-sref="dashboard.pollResults">Active Polls</a>
+            <a ui-sref="dashboard.createPoll">Create Poll</a>
+        </div>
+    </div>
+
 </header>
 
-<div class="container">
-container will be 80% of page
-
+<div class="headerDivider">
 
 </div>
+
+<ui-view>
+</ui-view>
+
