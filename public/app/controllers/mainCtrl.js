@@ -6,11 +6,15 @@ app.controller("mainCtrl", function($scope, mainService) {
 
 	var socket = io.connect();
 
-	$scope.createPoll = function(){
-        var newPoll = [$scope.choice1, $scope.choice2, $scope.choice3, $scope.choice4];
-        mainService.createPoll(newPoll);
-		socket.emit('poll', options);		
-	};
+		$scope.createPoll = function(){
+            var newTitle = $scope.pollTitle;
+            var newPoll = [{"body":$scope.choice1}, {"body":$scope.choice2}, {"body":$scope.choice3}, {"body":$scope.choice4}];
 
+                mainService.createPoll(newTitle, newPoll);
+
+
+			//socket.emit('poll', options);
+			//console.log(options);
+		};
 
 });
