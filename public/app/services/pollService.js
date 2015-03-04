@@ -9,7 +9,7 @@ app.service('pollService', function($http, $q){
       method: 'GET',
       url: '/api/poll/' + id
     }).then(function(res){
-      console.log(res);
+      console.log(res.data);
       dfd.resolve(res.data);
     })
     return dfd.promise;

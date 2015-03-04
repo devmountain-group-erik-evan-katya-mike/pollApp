@@ -7,15 +7,9 @@
 
     <div class="panel-body">
        Created By: {{poll.owner}}
-        <form role="form" ng-repeat="poll in poll">
+        <form role="form" ng-repeat="choice in poll.choices">
             <div class="radio">
-                <label><input type="radio" name="optradio">{{poll.choices}}</label>
-            </div>
-            <div class="radio">
-                <label><input type="radio" name="optradio">{{poll.body}}</label>
-            </div>
-            <div class="radio disabled">
-                <label><input type="radio" name="optradio">{{poll.body}}</label>
+                <label><input type="radio" name="optradio">{{choice.body}}</label>
             </div>
         </form>
     </div>
