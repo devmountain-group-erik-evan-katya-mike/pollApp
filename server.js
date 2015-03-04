@@ -50,7 +50,7 @@ passport.use(new TwitterStrategy({
 app.get('/auth/twitter', passport.authenticate('twitter'));
 app.get('/auth/twitter/callback', passport.authenticate('twitter', {
 	
-  successRedirect: '/',
+  successRedirect: '/dashboard',
 	failureRedirect: '/login.html'
 }));
 
