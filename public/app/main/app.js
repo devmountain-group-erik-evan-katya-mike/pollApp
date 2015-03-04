@@ -6,19 +6,27 @@ app.config(function($stateProvider) {
         .state("home", {
 
 
-    })
+        })
         .state("login", {
             url: "/login",
-            templateUrl: "views/login.html",
+            templateUrl: "app/views/login.html",
             controller: "loginCtrl"
-    })
+        })
         .state("dashboard", {
             url: "/dashboard",
-            templateUrl: "views/dashboard.html",
+            templateUrl: "app/views/dashboard.html",
             controller: "dashboardCtrl"
         })
-
-
-
+        .state("poll", {
+            url:"/poll/:id",
+            templateUrl: 'app/views/single_poll_view.html',
+            controller: 'pollCtrl',
+            resolve: {
+                poll: function(pollService, $stateParams){
+                    console.log('in get poll resolve');
+                    return pollService.getPoll($stateParams.id);
+                }
+            }
+        })
 
 })
