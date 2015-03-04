@@ -7,6 +7,8 @@ var passport = require('passport');
 var io = require('socket.io')();
 var TwitterStrategy = require('passport-twitter').Strategy;
 var app = express();
+var userCtrl = require('./lib/controllers/user');
+var pollCtrl = require('./lib/controllers/poll');
 
 
         //middleware start
@@ -19,29 +21,49 @@ app.use(passport.initialize());
 app.use(passport.session());
         //middleware end
 
+passport.serializeUser(function(user, done) {
+  done(null, user);
+});
+passport.deserializeUser(function(obj, done) {
+  done(null, obj);
+});
 
         //twitter oauth start                       
 passport.use(new TwitterStrategy({
 	consumerKey: config.twitter_key,
 	consumerSecret: config.twitter_secret,
 	callbackURL: 'http://localhost:8080/auth/twitter/callback'
-}, function(token, tokenSecret, profile, done) {
-	//create/update/lookup db record
-	done(null, profile);
-}));
-
-passport.serializeUser(function(user, done) {
-	done(null, user);
-});
-passport.deserializeUser(function(obj, done) {
-	done(null, obj);
-});
+  }, 
+  function(token, tokenSecret, profile, done) {
+    // asynchronous verification, for effect...
+    process.nextTick(function () {
+      console.log(profile);
+      userCtrl.updateOrCreate(profile).then(function(results){
+      done(null, profile);
+      }, function(err){
+      done(err, profile);
+      })
+    });
+  }
+));
 
 app.get('/auth/twitter', passport.authenticate('twitter'));
 app.get('/auth/twitter/callback', passport.authenticate('twitter', {
-	successRedirect: '/',
+	
+  successRedirect: '/',
 	failureRedirect: '/login.html'
 }));
+
+app.get('/auth/logout', function(req, res){
+  req.logout();
+  res.status(200).json(req.user);
+})
+
+app.get('/auth/me', function(req, res){
+  return res.json(req.user);
+});
+
+
 
 var isAuthed = function(req, res, next) {
 	if (!req.isAuthenticated()) {
@@ -50,14 +72,10 @@ var isAuthed = function(req, res, next) {
 	next();
 }
 
-app.get('/', isAuthed, function(req, res) {
-	return res.sendFile(__dirname+'/public/home.html');
-});
         //twitter oauth end
 
 
         //mongoDB start
-var pollCtrl = require('./lib/controllers/poll');
 
 mongoose.connect('mongodb://localhost/poll');
 var db = mongoose.connection;
