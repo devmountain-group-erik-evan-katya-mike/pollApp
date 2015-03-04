@@ -10,9 +10,10 @@ app.controller("mainCtrl", function($scope, mainService) {
 	//	console.log('hello');
 
 		$scope.createPoll = function(){
-            var newPoll = [$scope.choice1, $scope.choice2, $scope.choice3, $scope.choice4];
+            var newTitle = $scope.pollTitle;
+            var newPoll = [{"body":$scope.choice1}, {"body":$scope.choice2}, {"body":$scope.choice3}, {"body":$scope.choice4}];
 
-                mainService.createPoll(newPoll);
+                mainService.createPoll(newTitle, newPoll);
 
 
 			//socket.emit('poll', options);
