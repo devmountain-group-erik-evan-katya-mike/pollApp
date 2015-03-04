@@ -1,5 +1,6 @@
 {
+    "title": "test poll",
     "owner":"erik",
     "choices": [
-        {"body":"test1"}, {"body":"test2"}]
+        {"body":"test1", "arrPosition":0}, {"body":"test2", "arrPosition":1}]
 }
