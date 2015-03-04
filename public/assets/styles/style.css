@@ -1,0 +1,22 @@
+.loginImg {
+    width: 20px;
+    height: auto;
+}
+
+.dashboardHeader {
+    height: 20%;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.containerHeight {
+    height: 900px;
+
+}
+
+.footerClass {
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    background: rgb(51,51,51);
+}
