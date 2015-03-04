@@ -4,14 +4,15 @@
 }
 
 .dashboardHeader {
-    height: 20%;
+    height: 80px;
     width: 100%;
     margin-bottom: 10px;
 }
-
+.dashboardContainer {
+    margin-top: 10px;
+}
 .containerHeight {
-    height: 900px;
-
+    height: 800px;
 }
 
 .footerClass {
@@ -19,4 +20,42 @@
     width: 100%;
     height: 60px;
     background: rgb(51,51,51);
+}
+.headerDivider {
+    background: rgb(58,171,218);
+    width: 100%;
+    height: 30px;
+    /*background: url(../images/clean-textile.jpg);*/
+}
+
+.profilePic {
+    height: 60px;
+    width: auto;
+    display: inline-block;
+}
+
+.createPollBorder {
+    border-radius: 10%;
+}
+.cancel {
+    display: inline-block;
+    float: right;
+    font-size: 12px;
+    margin-top: 8px;
+    margin-right: 5px;
+}
+.createButton {
+    display: inline-block;
+    float: right;
+    margin-top: 3px;
+}
+.col-md-4 {
+    padding-right: 0;
+    padding-left: 0;
+}
+.viewResultsBox {
+  text-align: center;
+    font-size: 12px;
+    color: rgb(50,118,177);
+    margin-top: 3px;
 }
