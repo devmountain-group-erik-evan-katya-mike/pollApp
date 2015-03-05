@@ -4,8 +4,9 @@ app.config(function($stateProvider) {
 
     $stateProvider
         .state("home", {
-
-
+            url: "/home",
+            templateUrl: "app/views/home.html",
+            controller: "dashboardCtrl"
         })
         .state("login", {
             url: "/login",
@@ -17,21 +18,15 @@ app.config(function($stateProvider) {
             templateUrl: "app/views/dashboard.html",
             controller: "dashboardCtrl"
         })
-        .state("dashboard.pollResults", {
-            url: "/dashboard/pollresults",
-            templateUrl: "/app/views/pollresults.html",
+        .state("dashboard.activePolls", {
+            url: "/activepolls",
+            templateUrl: "/app/views/activepolls.html",
             controller: "pollCtrl"
         })
         .state("dashboard.createPoll", {
                 url: "/createpoll",
                 templateUrl: "/app/views/createpoll.html",
-                controller: "pollCtrl"
-        })
-        .state("dashboard.createPoll.pollOptions", {
-            url: "/polloptions",
-            templateUrl: "/app/views/polloptions.html",
-            controller: "pollCtrl"
-
+                controller: "createPollCtrl"
         })
         .state("poll", {
             url:"/poll/:id",
@@ -44,5 +39,6 @@ app.config(function($stateProvider) {
                 }
             }
         })
+
 
 })

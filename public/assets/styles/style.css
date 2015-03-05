@@ -1,3 +1,9 @@
+body {
+    margin: 0;
+    padding: 0;
+    /*background: rgb(240,240,240);*/
+}
+
 .loginImg {
     width: 20px;
     height: auto;
@@ -9,13 +15,61 @@
     margin-bottom: 10px;
 }
 .dashboardContainer {
-    margin-top: 10px;
+    margin-top: 0;
+    background: #ffffff;
+
+}
+.dashboardImage {
+    display: inline-block;
+    height: 60px;
+    width: auto;
+}
+.dashboardUser {
+    display: inline-block;
+    height: 60px;
+    width: 150px;
+    margin-left: 15px;
+}
+.dashboardLinks {
+    display: inline-block;
+    margin-left: 15px;
+    padding-top: 30px;
+}
+.dashboardView {
+    background: #ffffff;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    margin-top: 20px;
+}
+.dashboardContainer {
+    height: 600px;
+}
+.homeView {
+  background: #ffffff;
+}
+.mainView {
+    background: #ffffff;
+}
+.homeContainer {
+    background: #ffffff;
+    padding-top: 0;
+    height: 100%;
+}
+.navbar {
+    margin-bottom: 0;
+}
+.activePolls {
+    margin-top: 15px;
 }
 .containerHeight {
     height: 800px;
 }
-
+.row {
+    margin-left: 0;
+    margin-right: 0;
+}
 .footerClass {
+    position: absolute;
     bottom: 0;
     width: 100%;
     height: 60px;
@@ -23,8 +77,10 @@
 }
 .headerDivider {
     background: rgb(58,171,218);
-    width: 100%;
-    height: 30px;
+    padding-left: 0;
+    padding-right: 0;
+    height: 15px;
+    border-radius: 5px;
     /*background: url(../images/clean-textile.jpg);*/
 }
 
@@ -34,8 +90,9 @@
     display: inline-block;
 }
 
-.createPollBorder {
-    border-radius: 10%;
+.createPollBox {
+    border-radius: 5px;
+    margin-top: 10px;
 }
 .cancel {
     display: inline-block;
@@ -48,6 +105,7 @@
     display: inline-block;
     float: right;
     margin-top: 3px;
+    margin-left: 5px;
 }
 .col-md-4 {
     padding-right: 0;
@@ -57,5 +115,17 @@
   text-align: center;
     font-size: 12px;
     color: rgb(50,118,177);
-    margin-top: 3px;
+    margin-top: 15px;
 }
+.panel-color {
+    background: rgb(58,171,218);
+    color: #ffffff;
+}
+.previewButton {
+    margin-top: 50px;
+}
+.panel-heading {
+    height: 40px;
+    color: #ffffff;
+}
+

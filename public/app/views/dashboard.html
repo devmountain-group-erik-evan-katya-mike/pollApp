@@ -1,20 +1,30 @@
-<header class="dashboardHeader">
-    <div class="container">
-        <div class="profilePicture">
-            <img src="{{ProfilePic}}" class="img-responsive">
-        </div>
-        <div>Dashboard is in a container Height is 80%;
-            <a ui-sref="dashboard.pollResults">Active Polls</a>
-            <a ui-sref="dashboard.createPoll">Create Poll</a>
-        </div>
+
+    <div class="container dashboardView">
+        <header class="dashboardHeader">
+
+            <div class="dashboardImage">
+                <img src="{{user.photos[0].value}}" class="img-responsive">
+            </div>
+
+
+            <div class="dashboardUser">{{user.displayName}}</div>
+
+            <div class="dashboardLinks"><a ui-sref="dashboard.createPoll">Create Poll</a></div>
+            <div class="dashboardLinks"><a ui-sref="dashboard.activePolls">Active Polls</a></div>
+
+        </header>
     </div>
 
-</header>
 
-<div class="headerDivider">
 
+
+
+
+
+<div  class="container dashboardContainer">
+    <div class="headerDivider"></div>
+        <ui-view>
+        </ui-view>
 </div>
 
-<ui-view>
-</ui-view>
 
