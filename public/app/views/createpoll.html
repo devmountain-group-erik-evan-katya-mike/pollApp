@@ -1,26 +1,35 @@
 
-
-
+<form name="frm">
 <div class="row createPollBox">
 
     <div class="panel panel-primary col-md-4 createPollBox" ng-hide="firstBox">
 
         <div class="panel-body">
-            <form>
                 <div class="form-group">
-                    <label for="pollTitle">Poll Question</label>
+                    <label>Poll Question</label>
                    <div>
-                    <input type="text" class="form-control" id="pollTitle" placeholder="What question would you like to poll?" ng-model="title">
-                      <div><button class="createButton btn btn-primary btn-xs" ng-click="toggleBox()">create</button><div class="cancel"><a ui-sref="dashboard">Cancel</a></div></div>
+                    <input type="text"
+                           name="pollTitle"
+                           class="form-control"
+                           ng-minlength="1"
+                           placeholder="What question would you like to poll?"
+                           ng-model="title"
+                           required>
+                       <span ng-show="frm.pollTitle.$dirty && frm.pollTitle.$error.required">Question Required</span>
+                      <div><button class="createButton btn btn-primary btn-xs" ng-click="toggleBox()" ng-disabled="frm.$invalid">Create</button><div class="cancel"><a ui-sref="dashboard">Cancel</a></div>
+                      </div>
                     </div>
                 </div>
-            </form>
         </div>
     </div>
+</div>
+</form>
+
 
 <div class="col-md-4" ng-show="secondBox"></div>
 
 
+<form name="frm1">
        <div class="panel panel-primary col-md-4 createPollBox" ng-show="secondBox">
 
         <div class="panel-heading">
@@ -29,31 +38,35 @@
         <div class="panel-body">
 
             <div class="panel-body">
+
                 <div class="form-group">
-                    <label for="pollTitle">Answer Choices</label>
+                    <label>Answer Choices</label>
                     <div class="form-group">
 
-                        <input type="text" class="form-control" id="options" placeholder="Enter poll option"  ng-model="optionOne">
+                        <input type="text" name="pollChoices" class="form-control"  placeholder="Enter poll option"  ng-minlength="1" ng-model="optionOne" required>
                     </div>
                     <div class="form-group">
 
-                        <input type="text" class="form-control" id="options" placeholder="Enter poll option" ng-model="optionTwo">
+                        <input type="text" name="pollChoices" class="form-control" placeholder="Enter poll option" ng-minlength="1" ng-model="optionTwo" required>
                     </div>
                     <div class="form-group">
 
-                        <input type="text" class="form-control" id="options" placeholder="Enter poll option" ng-model="optionThree">
+                        <input type="text" name="pollChoices" class="form-control" placeholder="Enter poll option" ng-minlength="1" ng-model="optionThree" required>
                     </div>
                     <div class="form-group">
 
-                        <input type="text" class="form-control" id="options" placeholder="Enter poll option" ng-model="optionFour">
+                        <input type="text" name="pollChoices" class="form-control" placeholder="Enter poll option" ng-minlength="1" ng-model="optionFour" required>
                     </div>
-                    <button class="createButton btn btn-primary btn-xs" ng-click="toggleForward()">Next</button>
+                    <button class="createButton btn btn-primary btn-xs" ng-click="toggleForward()" ng-disabled="frm1.$invalid">Next</button>
                     <button class="createButton btn btn-primary btn-xs" ng-click="toggleBack()">Back</button>
+                    <div class="cancel"><a ui-sref="dashboard">Cancel</a></div>
                 </div>
+
 
              </div>
         </div>
     </div>
+</form>
 
     <div class="col-md-4" ng-hide="secondBox"></div>
     <div class="col-md-4" ng-show="firstBox"></div>
@@ -61,33 +74,33 @@
 
     <div class="panel panel-primary col-md-4 createPollBox" ng-show="thirdBox">
         <div class="panel-heading">
-            <h3 class="panel-title">{{pollQuestion}}</h3>
+            <h3 class="panel-title">{{title}}</h3>
         </div>
 
         <div class="panel-body">
             <div class="form-group">
                 <div class="radio">
                     <label>
-                        <input type="radio">
-                        {{choice1}}
+                        <input type="radio" disabled>
+                        {{optionOne}}
                     </label>
                 </div>
                 <div class="radio">
                     <label>
-                    <input type="radio">
-                    {{choice2}}
+                    <input type="radio" disabled>
+                    {{optionTwo}}
                     </label>
                 </div>
                 <div class="radio">
                     <label>
-                    <input type="radio">
-                        {{choice3}}
+                    <input type="radio" disabled>
+                        {{optionThree}}
                     </label>
                 </div>
                 <div class="radio">
                     <label>
-                    <input type="radio">
-                    {{choice4}}
+                    <input type="radio" disabled>
+                    {{optionFour}}
                     </label>
                 </div>
                 <div class="previewButton">
@@ -95,53 +108,17 @@
                 <div class="viewResultsBox">View Results</div>
                 </div>
             </div>
-            <button class="createButton btn btn-primary btn-xs" ng-Click="createPoll()">Submit</button>
+            <button class="createButton btn btn-primary btn-xs" ng-click="createPoll()">Submit</button>
             <button class="createButton btn btn-primary btn-xs" ng-click="toggleFinalBack()">Back</button>
+            <div class="cancel"><a ui-sref="dashboard">Cancel</a></div>
+
         </div>
 
 
-
-
-</div>
-
+    </div>
 
 
 
-
-
-    <!--<button type="submit" class="btn btn-primary" ng-Click="createPoll()">Submit</button>-->
-
-
-
-
-
-    <!--<div class="panel col-md-4">-->
-
-        <!--<form>-->
-            <!--<div class="form-group">-->
-                <!--<label for="pollTitle">Poll Title</label>-->
-                <!--<input type="text" class="form-control" id="pollTitle" placeholder="Enter title" ng-model="pollTitle">-->
-            <!--</div>-->
-            <!--<div class="form-group">-->
-                <!--<label for="optionOne">1.</label>-->
-                <!--<input type="text" class="form-control" id="options" placeholder="Enter poll option"  ng-model="choice1">-->
-            <!--</div>-->
-            <!--<div class="form-group">-->
-                <!--<label for="optionTwo">2.</label>-->
-                <!--<input type="text" class="form-control" id="options" placeholder="Enter poll option" ng-model="choice2">-->
-            <!--</div>-->
-            <!--<div class="form-group">-->
-                <!--<label for="optionThree">3.</label>-->
-                <!--<input type="text" class="form-control" id="options" placeholder="Enter poll option" ng-model="choice3">-->
-            <!--</div>-->
-            <!--<div class="form-group">-->
-                <!--<label for="optionFour">4.</label>-->
-                <!--<input type="text" class="form-control" id="options" placeholder="Enter poll option" ng-model="choice4">-->
-            <!--</div>-->
-
-                <!--<button type="submit" class="btn btn-default" ng-Click="createPoll()">Submit</button>-->
-        <!--</form>-->
-    <!--</div>-->
 
 
 
