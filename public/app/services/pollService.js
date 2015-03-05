@@ -39,8 +39,8 @@ app.service('pollService', function($http, $q, $state){
             data: {owner: owner, title: title, choices: poll}
         }).then(function(res) {
             console.log(res)
-            dfd.resolve(res);
-            $state.go("dashboard.activePolls")
+            dfd.resolve(res.data);
+            $state.go("poll", {id: res.data._id})
         }, function(err) {
             console.log(err)
             dfd.resolve(err);

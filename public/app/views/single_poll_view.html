@@ -1,19 +1,45 @@
-<div class="container">
-<div class="panel panel-default col-md-4">
-    <div class="panel-heading"> <h3 class="panel-title">{{poll.title}}</h3></div>
+
+<div class="col-md-4"></div>
+<div class="panel panel-primary col-md-4 createPollBox">
+    <div class="panel-heading">
+        <h3 class="panel-title">{{poll.title}}</h3>
+    </div>
 
     <div class="panel-body">
-       Created By: {{poll.owner}
+        <div class="form-group">
+            <div class="radio">
+                <label>
+                    <span ng-repeat="choice in poll.choices">
+                    <input type="radio" name="name" ng-value="choice"  ng-model="$parent.selectedChoice">
+                        {{choice.body}}<br/>
+                        </span>
 
-          <form>
-              Select One:
-              <br/>
-            <span ng-repeat="choice in poll.choices">
-              <input type="radio" name="name" ng-value="choice" ng-model="$parent.selectedChoice">{{choice.body}}<br/>
-            </span>
-            <button class="btn btn-primary" ng-click="castVote()">Cast Vote</button>
-          </form>
-  
-   </div>
-</div>
+                </label>
+            </div>
+            <!--<div class="radio">-->
+                <!--<label>-->
+                    <!--<input type="radio">-->
+                    <!--{{poll.choices[1]}}-->
+                <!--</label>-->
+            <!--</div>-->
+            <!--<div class="radio">-->
+                <!--<label>-->
+                    <!--<input type="radio">-->
+                    <!--{{choice[2]}}-->
+                <!--</label>-->
+            <!--</div>-->
+            <!--<div class="radio">-->
+                <!--<label>-->
+                    <!--<input type="radio">-->
+                    <!--{{choice[3]}}-->
+                <!--</label>-->
+            <!--</div>-->
+            <div class="previewButton">
+                <button class="btn btn-primary btn-md btn-block" ng-click="castVote()">Vote</button>
+                <div class="viewResultsBox">View Results</div>
+            </div>
+        </div>
+        <!--<button class="createButton btn btn-primary btn-xs" ng-Click="createPoll()">Submit</button>-->
+        <!--<button class="createButton btn btn-primary btn-xs" ng-click="toggleFinalBack()">Back</button>-->
+    </div>
 </div>

@@ -45,10 +45,20 @@ app.controller("createPollCtrl", function($scope, $rootScope, pollService, authS
     $scope.createPoll = function(){
         console.log('USER: ', $rootScope.user.id);
         var newPollChoices = [{"body":$scope.choice1, arrPosition: 0}, {"body":$scope.choice2, "arrPosition": 1}, {"body":$scope.choice3, "arrPosition": 2}, {"body":$scope.choice4, "arrPosition": 3}];
-        pollService.createPoll($rootScope.user.id, $scope.pollQuestion, newPollChoices);
+        pollService.createPoll($rootScope.user.id, $scope.pollQuestion, newPollChoices).then(function(res) {
+            $scope.data = res;
+        });
         ;
 
     };
+
+    $scope.castVote = function(){
+        console.log($stateParams.id, $scope.selectedChoice.arrPosition);
+        pollService.castVote($stateParams.id, $scope.selectedChoice.arrPosition)
+            .then(function(res){
+                console.log(res);
+            })
+    }
 
 
 

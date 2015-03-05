@@ -28,6 +28,12 @@ app.config(function($stateProvider) {
                 templateUrl: "/app/views/createpoll.html",
                 controller: "createPollCtrl"
         })
+        //.state("dashboard.singlePoll", {
+        //    url: "/singlepoll",
+        //    templateUrl: "/app/views/single_poll_view.html",
+        //    controller: "createPollCtrl"
+        //})
+
         .state("poll", {
             url:"/poll/:id",
             templateUrl: 'app/views/single_poll_view.html',
