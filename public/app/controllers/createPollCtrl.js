@@ -1,8 +1,10 @@
 var app = angular.module('pollApp');
 
-app.controller("createPollCtrl", function($scope, pollService) {
+app.controller("createPollCtrl", function($scope, $rootScope, pollService, authService) {
 
     $scope.pollQuestion;
+
+
 
     $scope.toggleBox = function() {
 
@@ -41,8 +43,9 @@ app.controller("createPollCtrl", function($scope, pollService) {
     }
 
     $scope.createPoll = function(){
-        var newPoll = [{"body":$scope.choice1, arrPosition: 0}, {"body":$scope.choice2, "arrPosition": 1}, {"body":$scope.choice3, "arrPosition": 2}, {"body":$scope.choice4, "arrPosition": 3}];
-        pollService.createPoll($scope.pollQuestion, newPoll);
+        console.log('USER: ', $rootScope.user.id);
+        var newPollChoices = [{"body":$scope.choice1, arrPosition: 0}, {"body":$scope.choice2, "arrPosition": 1}, {"body":$scope.choice3, "arrPosition": 2}, {"body":$scope.choice4, "arrPosition": 3}];
+        pollService.createPoll($rootScope.user.id, $scope.pollQuestion, newPollChoices);
         ;
 
     };

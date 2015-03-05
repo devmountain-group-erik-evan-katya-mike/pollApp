@@ -1,17 +1,17 @@
 var app = angular.module("pollApp");
 
-app.controller("dashboardCtrl", function($scope, dashboardService, authService, $state) {
+app.controller("dashboardCtrl", function($scope, $rootScope, dashboardService, authService, $state) {
 
-
+   
+   
 
     var socket = io.connect();
 
     var updateUser = function(){
         authService.updateUser()
             .then(function(data){
-                console.log('Auth data: ', data);
-                $scope.user = data;
-                //console.log($scope.user);
+                $rootScope.user = data;
+                console.log('root scope user: ', $rootScope.user);
             })
     }
     updateUser();

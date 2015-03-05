@@ -29,13 +29,14 @@ app.service('pollService', function($http, $q, $state){
     return dfd.promise;
   }
 
-    this.createPoll = function(title, poll) {
+    this.createPoll = function(owner, title, poll) {
+        console.log('OWNER: ', owner);
         console.log(poll);
         var dfd = $q.defer()
         $http({
             method: 'POST',
             url: '/api/poll/',
-            data: {title: title, choices: poll}
+            data: {owner: owner, title: title, choices: poll}
         }).then(function(res) {
             console.log(res)
             dfd.resolve(res);
