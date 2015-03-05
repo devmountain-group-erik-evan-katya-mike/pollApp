@@ -10,7 +10,7 @@ body {
 }
 
 .dashboardHeader {
-    height: 80px;
+    height: 60px;
     width: 100%;
     margin-bottom: 10px;
 }
@@ -23,17 +23,27 @@ body {
     display: inline-block;
     height: 60px;
     width: auto;
+    padding-top: 5px;
+    padding-left: 15px;
+    float: left;
 }
 .dashboardUser {
     display: inline-block;
-    height: 60px;
+    height: 100%;
     width: 150px;
-    margin-left: 15px;
+    float: left;
+    margin-left: 10px;
+    margin-top: 17px;
+}
+.ng-binding {
+    margin-bottom: 0;
+    padding-bottom: 0;
 }
 .dashboardLinks {
     display: inline-block;
     margin-left: 15px;
     padding-top: 30px;
+    float:left;
 }
 .dashboardView {
     background: #ffffff;
@@ -83,6 +93,9 @@ body {
     border-radius: 5px;
     /*background: url(../images/clean-textile.jpg);*/
 }
+input.ng-invalid.ng-dirty {
+    border: 1px solid #FA787E;
+}
 
 .profilePic {
     height: 60px;
@@ -100,6 +113,10 @@ body {
     font-size: 12px;
     margin-top: 8px;
     margin-right: 5px;
+}
+.inputWarning {
+    color: #ff0000;
+    font-size: 12px;
 }
 .createButton {
     display: inline-block;
