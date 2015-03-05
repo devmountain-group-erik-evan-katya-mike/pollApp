@@ -1,6 +1,7 @@
 var app = angular.module('pollApp');
 
-app.service('pollService', function($http, $q){
+app.service('pollService', function($http, $q, $state){
+
   this.getPoll = function(id){
     console.log('in getpoll service');
     console.log(id);
@@ -27,5 +28,23 @@ app.service('pollService', function($http, $q){
     })
     return dfd.promise;
   }
+
+    this.createPoll = function(title, poll) {
+        console.log(poll);
+        var dfd = $q.defer()
+        $http({
+            method: 'POST',
+            url: '/api/poll/',
+            data: {title: title, choices: poll}
+        }).then(function(res) {
+            console.log(res)
+            dfd.resolve(res);
+            $state.go("dashboard.activePolls")
+        }, function(err) {
+            console.log(err)
+            dfd.resolve(err);
+        })
+        return dfd.promise;
+    }
 
 })
