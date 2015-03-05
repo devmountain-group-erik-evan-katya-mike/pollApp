@@ -25,6 +25,7 @@ app.service('pollService', function($http, $q, $state){
     }).then(function(res){
       console.log(res);
       dfd.resolve(res.data);
+        $state.go("pollResults", {id: res.data._id});
     })
     return dfd.promise;
   }
