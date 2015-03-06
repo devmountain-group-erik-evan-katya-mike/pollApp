@@ -63,6 +63,8 @@ app.controller("createPollCtrl", function($scope, $rootScope, pollService, authS
 
     $scope.test = "What is going on?";
 
+    
+
 
 
 })

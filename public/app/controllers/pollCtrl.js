@@ -1,8 +1,8 @@
 var app = angular.module('pollApp');
 
-app.controller('pollCtrl', function($scope, $stateParams, poll, pollService){
+app.controller('pollCtrl', function($scope, $stateParams, $interval, poll, pollService){
 
-    $scope.poll = poll;
+  $scope.poll = poll;
 
   //  mainService.createPoll(newTitle, newPoll);
   //  //socket.emit('poll', options);
@@ -16,6 +16,5 @@ app.controller('pollCtrl', function($scope, $stateParams, poll, pollService){
         console.log(res);
       })
   }
-
 
 })
