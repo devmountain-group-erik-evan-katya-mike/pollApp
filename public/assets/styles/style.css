@@ -4,6 +4,12 @@ body {
     /*background: rgb(240,240,240);*/
 }
 
+.boxSize {
+    height: 100px;
+    width: 100px;
+    background-color: blue;
+}
+
 .loginImg {
     width: 20px;
     height: auto;

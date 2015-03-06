@@ -21,19 +21,13 @@ app.config(function($stateProvider) {
         .state("dashboard.activePolls", {
             url: "/activepolls",
             templateUrl: "/app/views/activepolls.html",
-            controller: "pollCtrl"
+            controller: "dashboardCtrl"
         })
         .state("dashboard.createPoll", {
                 url: "/createpoll",
                 templateUrl: "/app/views/createpoll.html",
                 controller: "createPollCtrl"
         })
-        //.state("dashboard.singlePoll", {
-        //    url: "/singlepoll",
-        //    templateUrl: "/app/views/single_poll_view.html",
-        //    controller: "createPollCtrl"
-        //})
-
         .state("poll", {
             url:"/poll/:id",
             templateUrl: 'app/views/single_poll_view.html',

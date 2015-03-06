@@ -39,7 +39,7 @@ app.service('pollService', function($http, $q, $state){
             url: '/api/poll/',
             data: {owner: owner, title: title, choices: poll}
         }).then(function(res) {
-            console.log(res)
+            console.log(res.data.owner);
             dfd.resolve(res.data);
             $state.go("poll", {id: res.data._id})
         }, function(err) {
@@ -48,5 +48,20 @@ app.service('pollService', function($http, $q, $state){
         })
         return dfd.promise;
     }
+
+    //this.getUserPolls = function(id) {
+    //    console.log(id);
+    //    var dfd = $q.defer();
+    //    $http({
+    //        method: "GET",
+    //        url: '/api/poll/user/:_id' +id
+    //    }).then(function(res) {
+    //        dfd.resolve(res.data);
+    //        $state.go("dashboard.activePolls")
+    //    }, function(err){
+    //        dfd.reject(err);
+    //    })
+    //    return dfd.promise;
+    //}
 
 })

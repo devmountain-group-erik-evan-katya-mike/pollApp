@@ -47,6 +47,7 @@ app.controller("createPollCtrl", function($scope, $rootScope, pollService, authS
         var newPollChoices = [{"body":$scope.optionOne, arrPosition: 0}, {"body":$scope.optionTwo, "arrPosition": 1}, {"body":$scope.optionThree, "arrPosition": 2}, {"body":$scope.optionFour, "arrPosition": 3}];
         pollService.createPoll($rootScope.user.id, $scope.title, newPollChoices).then(function(res) {
             $scope.data = res;
+            $rootscope.user.owner = res.data.owner;
         });
 
 
