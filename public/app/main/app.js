@@ -42,7 +42,7 @@ app.config(function($stateProvider) {
         .state("pollResults", {
             url:"/poll/:id",
             templateUrl: "app/views/singlepollresults.html",
-            controller: 'pollCtrl',
+            controller: 'pollResultCtrl',
             resolve: {
                 poll: function(pollService, $stateParams){
                     console.log('in get poll results resolve');
