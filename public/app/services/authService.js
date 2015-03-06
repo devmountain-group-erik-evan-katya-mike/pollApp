@@ -9,6 +9,7 @@ app.service('authService', function($http, $rootScope){
      method: 'GET',
      url: '/auth/me'
    }).then(function(res){
+       console.log(res.data)
      user = res.data;
      return user;
    })
