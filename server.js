@@ -87,11 +87,11 @@ db.once('open', function (callback) {
 
 
         //socket.io start
-io.on('connection', function(socket){
-	console.log('connected!')
-	socket.on('poll', function(options){
-	})
-})
+// io.on('connection', function(socket){
+// 	console.log('connected!')
+// 	socket.on('poll', function(options){
+// 	})
+// })
         //socket.io end
 
 
