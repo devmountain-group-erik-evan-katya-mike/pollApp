@@ -1,9 +1,7 @@
 var app = angular.module("pollApp");
 
-app.controller("dashboardCtrl", function($scope, $rootScope, dashboardService, authService, $state) {
+app.controller("dashboardCtrl", function($scope, $rootScope, dashboardService, authService, $state, pollService) {
 
-   
-   
 
     var socket = io.connect();
 
@@ -23,6 +21,13 @@ app.controller("dashboardCtrl", function($scope, $rootScope, dashboardService, a
                 $state.go("home");
             })
     }
+    //
+    //$scope.getUserPolls = function() {
+    //    console.log($rootScope.user);
+    //    console.log("getUserPolls Function")
+    //    pollService.getUserPolls($rootScope.user.id);
+    //}
+
 
 
 })
