@@ -49,19 +49,20 @@ app.service('pollService', function($http, $q, $state){
         return dfd.promise;
     }
 
-    //this.getUserPolls = function(id) {
-    //    console.log(id);
-    //    var dfd = $q.defer();
-    //    $http({
-    //        method: "GET",
-    //        url: '/api/poll/user/:_id' +id
-    //    }).then(function(res) {
-    //        dfd.resolve(res.data);
-    //        $state.go("dashboard.activePolls")
-    //    }, function(err){
-    //        dfd.reject(err);
-    //    })
-    //    return dfd.promise;
-    //}
+    this.getUserPolls = function(id) {
+       console.log(id);
+       var dfd = $q.defer();
+       $http({
+           method: "GET",
+           url: '/api/poll/user/' +id
+       }).then(function(res) {
+           console.log('get user polls data: ', res.data);
+           dfd.resolve(res.data);
+           $state.go("dashboard.activePolls")
+       }, function(err){
+           dfd.reject(err);
+       })
+       return dfd.promise;
+    }
 
 })
