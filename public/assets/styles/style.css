@@ -1,7 +1,13 @@
-body {
+html, body {
     margin: 0;
     padding: 0;
+    height: 100%;
     /*background: rgb(240,240,240);*/
+}
+
+#wrapper {
+    min-height: 100%;
+    position: relative;
 }
 
 .boxSize {
@@ -20,11 +26,7 @@ body {
     width: 100%;
     margin-bottom: 10px;
 }
-.dashboardContainer {
-    margin-top: 0;
-    background: #ffffff;
 
-}
 .dashboardImage {
     display: inline-block;
     height: 60px;
@@ -41,10 +43,10 @@ body {
     margin-left: 10px;
     margin-top: 17px;
 }
-.ng-binding {
-    margin-bottom: 0;
-    padding-bottom: 0;
-}
+/*.ng-binding {*/
+    /*margin-bottom: 0;*/
+    /*padding-bottom: 0;*/
+/*}*/
 .dashboardLinks {
     display: inline-block;
     margin-left: 15px;
@@ -58,7 +60,8 @@ body {
     margin-top: 20px;
 }
 .dashboardContainer {
-    height: 600px;
+    height: 100%;
+    /*position: relative;*/
 }
 .homeView {
   background: #ffffff;
@@ -69,7 +72,7 @@ body {
 .homeContainer {
     background: #ffffff;
     padding-top: 0;
-    height: 100%;
+    min-height: 100%;
 }
 .navbar {
     margin-bottom: 0;
@@ -77,18 +80,19 @@ body {
 .activePolls {
     margin-top: 15px;
 }
-.containerHeight {
-    height: 800px;
-}
+/*.containerHeight {*/
+    /*height: 100%;*/
+/*}*/
 .row {
     margin-left: 0;
     margin-right: 0;
 }
 .footerClass {
     position: absolute;
+    clear: both;
     bottom: 0;
     width: 100%;
-    height: 60px;
+    height: 50px;
     background: rgb(51,51,51);
 }
 .headerDivider {
@@ -129,6 +133,7 @@ input.ng-invalid.ng-dirty {
     float: right;
     margin-top: 3px;
     margin-left: 5px;
+    border-radius: 3px;
 }
 .col-md-4 {
     padding-right: 0;
@@ -152,3 +157,78 @@ input.ng-invalid.ng-dirty {
     color: #ffffff;
 }
 
+.pollTopBorder {
+    border-radius: 5px;
+    background: #000000;
+    height: 8px;
+}
+.bottomHeaderBorder {
+    border-bottom: 2px solid rgb(58,171,218);
+    margin-top: 3px;
+    margin-bottom: 3px;
+}
+.pollLogo {
+    font-family: 'Arial', 'helvetia', serif;
+    font-size: 22px;
+    height: 40px;
+    text-align: center;
+}
+.pollTemplateTitle {
+    font-size: 18px;
+    /*text-align: center;*/
+    border-bottom: solid 1px #d3d3d3;
+    margin-bottom: 3px;
+}
+.pollBottomBorder {
+    background: rgb(51,51,51);
+    height: 8px;
+    border-radius: 5px;
+}
+.inputChoices {
+    margin-top: 5px;
+}
+.createPollBox2 {
+
+    margin-top: 50px;
+    border: none;
+}
+
+.createPollBottomBorder {
+    margin-top: 35px;
+}
+.createPreviewBottomBorder {
+    margin-top: 45px;
+}
+.addDelete {
+    display: inline-block;
+    float: left;
+    font-size: 12px;
+    margin-top: 8px;
+    margin-right: 5px;
+}
+.voteView {
+    margin: 0 auto;
+    text-align: center;
+    font-size: 18px;
+    font-family: 'Arial', 'helvetia', serif;
+    /*border-top: solid 1px #d3d3d3;*/
+    border-bottom: 10px;
+    padding-top: 15px;
+}
+.questionRequired {
+    color: #FF0000;
+}
+.centeredInput {
+    width: 80%;
+    margin: 0 auto;
+
+}
+.rightButtons {
+    margin-right: 10%;
+}
+.leftButtons {
+    margin-left: 10%;
+}
+.buttonBox {
+    margin-top: 10px;
+}

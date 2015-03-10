@@ -1,25 +1,58 @@
-<div class="container">
+<!--<div class="container">-->
+<!--<div class="col-md-4"></div>-->
+<!--<div class="panel panel-primary col-md-4 createPollBox">-->
+    <!--<div class="panel-heading">-->
+        <!--<h3 class="panel-title">{{poll.title}}</h3>-->
+    <!--</div>-->
+
+    <!--<div class="panel-body">-->
+        <!--<div class="form-group">-->
+            <!--<div class="radio">-->
+                <!--<label>-->
+                    <!--<span ng-repeat="choice in poll.choices">-->
+                    <!--&lt;!&ndash;<input type="text" name="name" ng-value="choice"  ng-model="$parent.selectedChoice">&ndash;&gt;-->
+                        <!--{{choice.body}} {{choice.counter}}<br/>-->
+                        <!--</span>-->
+
+                <!--</label>-->
+            <!--</div>-->
+
+        <!--</div>-->
+        <!--&lt;!&ndash;<button class="createButton btn btn-primary btn-xs" ng-Click="createPoll()">Submit</button>&ndash;&gt;-->
+        <!--&lt;!&ndash;<button class="createButton btn btn-primary btn-xs" ng-click="toggleFinalBack()">Back</button>&ndash;&gt;-->
+    <!--</div>-->
+<!--</div>-->
+<!--</div>-->
+
+<!--<div class="container">-->
 <div class="col-md-4"></div>
-<div class="panel panel-primary col-md-4 createPollBox">
-    <div class="panel-heading">
-        <h3 class="panel-title">{{poll.title}}</h3>
-    </div>
-
-    <div class="panel-body">
-        <div class="form-group">
-            <div class="radio">
-                <label>
-                    <span ng-repeat="choice in poll.choices">
-                    <!--<input type="text" name="name" ng-value="choice"  ng-model="$parent.selectedChoice">-->
-                        {{choice.body}} {{choice.counter}}<br/>
-                        </span>
-
-                </label>
+<form>
+    <div class="col-md-4 createPollBox2">
+        <div class="pollTopBorder"></div>
+        <div class="bottomHeaderBorder"></div>
+        <div class="pollLogo"><img src="./assets/images/Twitter-logo.png" class="loginImg">iePolls.com</div>
+        <div class="centeredInput">
+            <div class="pollTemplateTitle">{{poll.title}} </div>
+            <div class="pollBody"></div>
+            <div class="radio" ng-repeat="choice in poll.choices">
+                <form>
+                    <label>
+                        <!--<input type="radio" name="finalVote" ng-model="$parent.selectedChoice">{{choice.body}}-->
+                        <input type="radio" name="pollChoices" ng-model="$parent.selectedVote" value="{{choice}}">{{choice.body}} {{choice.counter}}
+                        <br/>
+                    </label>
+                </form>
             </div>
-
         </div>
-        <!--<button class="createButton btn btn-primary btn-xs" ng-Click="createPoll()">Submit</button>-->
-        <!--<button class="createButton btn btn-primary btn-xs" ng-click="toggleFinalBack()">Back</button>-->
+
+        <div class="Vote"></div><div class="viewResultsTemplate"></div>
+        <div class="voteView">
+            <!--<div><a ng-click="castVote()">Vote     </a>|<a ui-sref="viewResults">     View Results</a></div>-->
+        </div>
+        <div class="bottomHeaderBorder createPreviewBottomBorder"></div>
+        <div class="pollBottomBorder"></div>
+
+
     </div>
-</div>
-</div>
+</form>
+<!--</div>-->

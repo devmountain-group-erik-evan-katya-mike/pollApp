@@ -1,64 +1,89 @@
+<!--<div class="activePolls">-->
+
+    <!--<div class="row">-->
+        <!--<div class="panel panel-info col-md-4">-->
+            <!--<div class="panel-heading">-->
+                <!--<h3 class="panel-title">Poll Title</h3>-->
+            <!--</div>-->
+            <!--<div class="panel-body">-->
+                <!--<div class="panel-body">-->
+                    <!--<div class="radio">-->
+                        <!--<label><input type="radio" name="optradio">Question 1</label>-->
+                    <!--</div>-->
+                    <!--<div class="radio">-->
+                        <!--<label><input type="radio" name="optradio">Question 2</label>-->
+                    <!--</div>-->
+                    <!--<div class="radio disabled">-->
+                        <!--<label><input type="radio" name="optradio">Question 3</label>-->
+                    <!--</div>-->
+                    <!--<button class="btn btn-info">Submit</button>-->
+                <!--</div>-->
+            <!--</div>-->
+        <!--</div>-->
+
+        <!--<div class="panel panel-primary col-md-4">-->
+            <!--<div class="panel-heading">-->
+                <!--<h3 class="panel-title">Poll Title</h3>-->
+            <!--</div>-->
+            <!--<div class="panel-body">-->
+                <!--<div class="panel-body">-->
+                    <!--<div class="radio">-->
+                        <!--<label><input type="radio" name="optradio">Question 1</label>-->
+                    <!--</div>-->
+                    <!--<div class="radio">-->
+                        <!--<label><input type="radio" name="optradio">Question 2</label>-->
+                    <!--</div>-->
+                    <!--<div class="radio disabled">-->
+                        <!--<label><input type="radio" name="optradio">Question 3</label>-->
+                    <!--</div>-->
+                    <!--<button class="btn btn-primary">Submit</button>-->
+                <!--</div>-->
+            <!--</div>-->
+        <!--</div>-->
+        <!--<div class="panel panel-success col-md-4">-->
+            <!--<div class="panel-heading">-->
+                <!--<h3 class="panel-title">Poll Title</h3>-->
+            <!--</div>-->
+            <!--<div class="panel-body">-->
+                <!--<div class="panel-body">-->
+                    <!--<div class="radio">-->
+                        <!--<label><input type="radio" name="optradio">Question 1</label>-->
+                    <!--</div>-->
+                    <!--<div class="radio">-->
+                        <!--<label><input type="radio" name="optradio">Question 2</label>-->
+                    <!--</div>-->
+                    <!--<div class="radio disabled">-->
+                        <!--<label><input type="radio" name="optradio">Question 3</label>-->
+                    <!--</div>-->
+                    <!--<button class="btn btn-success">Submit</button>-->
+                <!--</div>-->
+            <!--</div>-->
+        <!--</div>-->
+    <!--</div>-->
+<!--</div>-->
+
 <div class="activePolls">
 
     <div class="row">
+        <span ng-repeat="key in userPolls">
         <div class="panel panel-info col-md-4">
             <div class="panel-heading">
-                <h3 class="panel-title">Poll Title</h3>
+                <h3 class="panel-title">{{key.title}}</h3>
             </div>
             <div class="panel-body">
                 <div class="panel-body">
-                    <div class="radio">
-                        <label><input type="radio" name="optradio">Question 1</label>
-                    </div>
-                    <div class="radio">
-                        <label><input type="radio" name="optradio">Question 2</label>
-                    </div>
-                    <div class="radio disabled">
-                        <label><input type="radio" name="optradio">Question 3</label>
-                    </div>
-                    <button class="btn btn-info">Submit</button>
-                </div>
-            </div>
-        </div>
+                    <div class="radio" ng-repeat="nestedKey in key.choices">
+                        <label><input type="radio" disabled>{{nestedKey.body}} - {{nestedKey.counter}}</label>
 
-        <div class="panel panel-primary col-md-4">
-            <div class="panel-heading">
-                <h3 class="panel-title">Poll Title</h3>
-            </div>
-            <div class="panel-body">
-                <div class="panel-body">
-                    <div class="radio">
-                        <label><input type="radio" name="optradio">Question 1</label>
                     </div>
-                    <div class="radio">
-                        <label><input type="radio" name="optradio">Question 2</label>
-                    </div>
-                    <div class="radio disabled">
-                        <label><input type="radio" name="optradio">Question 3</label>
-                    </div>
-                    <button class="btn btn-primary">Submit</button>
+
+                    <!--<button class="btn btn-info">Submit</button>-->
                 </div>
             </div>
         </div>
-        <div class="panel panel-success col-md-4">
-            <div class="panel-heading">
-                <h3 class="panel-title">Poll Title</h3>
-            </div>
-            <div class="panel-body">
-                <div class="panel-body">
-                    <div class="radio">
-                        <label><input type="radio" name="optradio">Question 1</label>
-                    </div>
-                    <div class="radio">
-                        <label><input type="radio" name="optradio">Question 2</label>
-                    </div>
-                    <div class="radio disabled">
-                        <label><input type="radio" name="optradio">Question 3</label>
-                    </div>
-                    <button class="btn btn-success">Submit</button>
-                </div>
-            </div>
-        </div>
+        </span>
     </div>
 </div>
+
+
 
