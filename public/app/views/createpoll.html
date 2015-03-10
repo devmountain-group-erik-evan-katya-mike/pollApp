@@ -1,121 +1,231 @@
 
+<!--<form name="frm">-->
+<!--<div class="row createPollBox">-->
+
+    <!--<div class="panel panel-primary col-md-4 createPollBox" ng-hide="firstBox">-->
+
+        <!--<div class="panel-body">-->
+                <!--<div class="form-group">-->
+                    <!--<label>Poll Question</label>-->
+                   <!--<div>-->
+                    <!--<input type="text"-->
+                           <!--name="pollTitle"-->
+                           <!--class="form-control"-->
+                           <!--ng-minlength="1"-->
+                           <!--placeholder="What question would you like to poll?"-->
+                           <!--ng-model="title"-->
+                           <!--required>-->
+                       <!--<span ng-show="frm.pollTitle.$dirty && frm.pollTitle.$error.required">Question Required</span>-->
+                      <!--<div><button class="createButton btn btn-primary btn-xs" ng-click="toggleBox()" ng-disabled="frm.$invalid">Create</button><div class="cancel"><a ui-sref="dashboard">Cancel</a></div>-->
+                      <!--</div>-->
+                    <!--</div>-->
+                <!--</div>-->
+        <!--</div>-->
+    <!--</div>-->
+<!--</div>-->
+<!--</form>-->
+
+<!--------------------&ndash;&gt;-->
+
 <form name="frm">
-<div class="row createPollBox">
-
-    <div class="panel panel-primary col-md-4 createPollBox" ng-hide="firstBox">
-
-        <div class="panel-body">
-                <div class="form-group">
+    <div class="row createPollBox2">
+        <div class="col-md-4" ng-hide="firstBox">
+            <div class="pollTopBorder"></div>
+            <div class="bottomHeaderBorder"></div>
+            <div class="pollLogo"><img src="./assets/images/Twitter-logo.png" class="loginImg">iePolls.com</div>
+                <div class="centeredInput">
                     <label>Poll Question</label>
-                   <div>
+                <div>
+
                     <input type="text"
                            name="pollTitle"
-                           class="form-control"
+                           class="form-control inputCushion"
                            ng-minlength="1"
                            placeholder="What question would you like to poll?"
                            ng-model="title"
                            required>
-                       <span ng-show="frm.pollTitle.$dirty && frm.pollTitle.$error.required">Question Required</span>
-                      <div><button class="createButton btn btn-primary btn-xs" ng-click="toggleBox()" ng-disabled="frm.$invalid">Create</button><div class="cancel"><a ui-sref="dashboard">Cancel</a></div>
-                      </div>
-                    </div>
                 </div>
+                    <span ng-show="frm.pollTitle.$dirty && frm.pollTitle.$error.required" class="questionRequired">Question Required</span>
+                    <!--<div class="rightButtons">-->
+                        <div><button class="createButton btn btn-primary btn-xs" ng-click="toggleBox()" ng-disabled="frm.$invalid">Create</button><div class="cancel"><a ui-sref="dashboard">Cancel</a></div>
+                    </div>
+                    <!--</div>-->
+                </div>
+            <div class="bottomHeaderBorder createPollBottomBorder"></div>
+            <div class="pollBottomBorder"></div>
+
+            </div>
         </div>
     </div>
-</div>
 </form>
+
+
+
+<!---------------&ndash;&gt;-->
 
 
 <div class="col-md-4" ng-show="secondBox"></div>
 
 
+<!--<form name="frm1">-->
+       <!--<div class="panel panel-primary col-md-4 createPollBox" ng-show="secondBox">-->
+
+        <!--<div class="panel-heading">-->
+            <!--<h3 class="panel-title">{{title}}</h3>-->
+        <!--</div>-->
+        <!--<div class="panel-body">-->
+
+            <!--<div class="panel-body">-->
+
+                <!--<div class="form-group">-->
+                    <!--<label>Answer Choices</label>-->
+                    <!--<div class="form-group">-->
+
+                        <!--<input type="text" name="pollChoices" class="form-control"  placeholder="Enter poll option"  ng-minlength="1" ng-model="optionOne" required>-->
+                    <!--</div>-->
+                    <!--<div class="form-group">-->
+
+                        <!--<input type="text" name="pollChoices" class="form-control" placeholder="Enter poll option" ng-minlength="1" ng-model="optionTwo" required>-->
+                    <!--</div>-->
+                    <!--<div class="form-group">-->
+
+                        <!--<input type="text" name="pollChoices" class="form-control" placeholder="Enter poll option" ng-minlength="1" ng-model="optionThree" required>-->
+                    <!--</div>-->
+                    <!--<div class="form-group">-->
+
+                        <!--<input type="text" name="pollChoices" class="form-control" placeholder="Enter poll option" ng-minlength="1" ng-model="optionFour" required>-->
+                    <!--</div>-->
+                    <!--<button class="createButton btn btn-primary btn-xs" ng-click="toggleForward()" ng-disabled="frm1.$invalid">Next</button>-->
+                    <!--<button class="createButton btn btn-primary btn-xs" ng-click="toggleBack()">Back</button>-->
+                    <!--<div class="cancel"><a ui-sref="dashboard">Cancel</a></div>-->
+                <!--</div>-->
+
+
+             <!--</div>-->
+        <!--</div>-->
+    <!--</div>-->
+<!--</form>-->
+
+
+<!--<----------->
+
 <form name="frm1">
-       <div class="panel panel-primary col-md-4 createPollBox" ng-show="secondBox">
-
-        <div class="panel-heading">
-            <h3 class="panel-title">{{title}}</h3>
-        </div>
-        <div class="panel-body">
-
-            <div class="panel-body">
-
-                <div class="form-group">
-                    <label>Answer Choices</label>
-                    <div class="form-group">
-
-                        <input type="text" name="pollChoices" class="form-control"  placeholder="Enter poll option"  ng-minlength="1" ng-model="optionOne" required>
-                    </div>
-                    <div class="form-group">
-
-                        <input type="text" name="pollChoices" class="form-control" placeholder="Enter poll option" ng-minlength="1" ng-model="optionTwo" required>
-                    </div>
-                    <div class="form-group">
-
-                        <input type="text" name="pollChoices" class="form-control" placeholder="Enter poll option" ng-minlength="1" ng-model="optionThree" required>
-                    </div>
-                    <div class="form-group">
-
-                        <input type="text" name="pollChoices" class="form-control" placeholder="Enter poll option" ng-minlength="1" ng-model="optionFour" required>
-                    </div>
-                    <button class="createButton btn btn-primary btn-xs" ng-click="toggleForward()" ng-disabled="frm1.$invalid">Next</button>
-                    <button class="createButton btn btn-primary btn-xs" ng-click="toggleBack()">Back</button>
-                    <div class="cancel"><a ui-sref="dashboard">Cancel</a></div>
+    <div class="col-md-4" ng-show="secondBox">
+    <div class="pollTopBorder"></div>
+    <div class="bottomHeaderBorder"></div>
+    <div class="pollLogo"><img src="./assets/images/Twitter-logo.png" class="loginImg">iePolls.com</div>
+        <div class="centeredInput">
+            <div class="pollTemplateTitle">{{title}} </div>
+            <div class="pollBody"></div>
+               <div ng-repeat="choice in choices" class="inputChoices">
+                    <input type="text" name="pollChoices" class="form-control"  placeholder="Enter poll choice"  ng-minlength="1" ng-model="choice.option" required><br/>
                 </div>
-
-
-             </div>
         </div>
+        <!--<div class="Vote"></div><div class="viewResultsTemplate"></div>-->
+        <div class="rightButtons">
+            <button class="createButton btn btn-primary btn-xs" ng-click="toggleForward()" ng-disabled="frm1.$invalid">Preview</button>
+            <button class="createButton btn btn-primary btn-xs" ng-click="toggleBack()">Back</button>
+            <div class="cancel"><a ui-sref="dashboard">Cancel</a></div>
+        </div>
+            <div class="leftButtons">
+                <div class="addNewNumber addDelete"><a ng-click="addNewChoice()">Add Choice</a></div>
+                <div class="deleteOption addDelete"><a ng-click="deleteChoice()">Delete Choice</a></div>
+            </div>
+        <div class="bottomHeaderBorder createPollBottomBorder"></div>
+        <div class="pollBottomBorder"></div>
+
+
     </div>
 </form>
+
+
+<!-------------&ndash;&gt;-->
+
+
+
 
     <div class="col-md-4" ng-hide="secondBox"></div>
     <div class="col-md-4" ng-show="firstBox"></div>
 
 
-    <div class="panel panel-primary col-md-4 createPollBox" ng-show="thirdBox">
-        <div class="panel-heading">
-            <h3 class="panel-title">{{title}}</h3>
-        </div>
+    <!--<div class="panel panel-primary col-md-4 createPollBox" ng-show="thirdBox">-->
+        <!--<div class="panel-heading">-->
+            <!--<h3 class="panel-title">{{title}}</h3>-->
+        <!--</div>-->
 
-        <div class="panel-body">
-            <div class="form-group">
-                <div class="radio">
+        <!--<div class="panel-body">-->
+            <!--<div class="form-group">-->
+                <!--<div class="radio">-->
+                    <!--<label>-->
+                        <!--<input type="radio" disabled>-->
+                        <!--{{optionOne}}-->
+                    <!--</label>-->
+                <!--</div>-->
+                <!--<div class="radio">-->
+                    <!--<label>-->
+                    <!--<input type="radio" disabled>-->
+                    <!--{{optionTwo}}-->
+                    <!--</label>-->
+                <!--</div>-->
+                <!--<div class="radio">-->
+                    <!--<label>-->
+                    <!--<input type="radio" disabled>-->
+                        <!--{{optionThree}}-->
+                    <!--</label>-->
+                <!--</div>-->
+                <!--<div class="radio">-->
+                    <!--<label>-->
+                    <!--<input type="radio" disabled>-->
+                    <!--{{optionFour}}-->
+                    <!--</label>-->
+                <!--</div>-->
+                <!--<div class="previewButton">-->
+                <!--<button class="btn btn-primary btn-md btn-block disabled">Vote</button>-->
+                <!--<div class="viewResultsBox">View Results</div>-->
+                <!--</div>-->
+            <!--</div>-->
+            <!--<button class="createButton btn btn-primary btn-xs" ng-click="createPoll()">Submit</button>-->
+            <!--<button class="createButton btn btn-primary btn-xs" ng-click="toggleFinalBack()">Back</button>-->
+            <!--<div class="cancel"><a ui-sref="dashboard">Cancel</a></div>-->
+
+        <!--</div>-->
+
+<!--<--------------&ndash;&gt;-->
+
+
+        <form>
+            <div class="col-md-4" ng-show="thirdBox">
+                <div class="pollTopBorder"></div>
+                <div class="bottomHeaderBorder"></div>
+                <div class="pollLogo"><img src="./assets/images/Twitter-logo.png" class="loginImg">iePolls.com</div>
+                <div class="centeredInput">
+                    <div class="pollTemplateTitle">{{title}} </div>
+                    <div class="pollBody"></div>
+                <div class="radio" ng-repeat="key in choices">
                     <label>
-                        <input type="radio" disabled>
-                        {{optionOne}}
+                        <input type="radio" ng-model="choices"  disabled>{{key.option}}
+
                     </label>
                 </div>
-                <div class="radio">
-                    <label>
-                    <input type="radio" disabled>
-                    {{optionTwo}}
-                    </label>
                 </div>
-                <div class="radio">
-                    <label>
-                    <input type="radio" disabled>
-                        {{optionThree}}
-                    </label>
-                </div>
-                <div class="radio">
-                    <label>
-                    <input type="radio" disabled>
-                    {{optionFour}}
-                    </label>
-                </div>
-                <div class="previewButton">
-                <button class="btn btn-primary btn-md btn-block disabled">Vote</button>
-                <div class="viewResultsBox">View Results</div>
-                </div>
+
+                <div class="Vote"></div><div class="viewResultsTemplate"></div>
+                    <div class="rightButtons">
+                        <button class="createButton btn btn-primary btn-xs" ng-click="createPoll()">Submit</button>
+                        <button class="createButton btn btn-primary btn-xs" ng-click="toggleFinalBack()">Back</button>
+                        <div class="cancel"><a ui-sref="dashboard">Cancel</a></div>
+                    </div>
+                <div class="bottomHeaderBorder createPreviewBottomBorder"></div>
+                <div class="pollBottomBorder"></div>
+
+
             </div>
-            <button class="createButton btn btn-primary btn-xs" ng-click="createPoll()">Submit</button>
-            <button class="createButton btn btn-primary btn-xs" ng-click="toggleFinalBack()">Back</button>
-            <div class="cancel"><a ui-sref="dashboard">Cancel</a></div>
-
-        </div>
+        </form>
 
 
-    </div>
+
+
+</div>
 
 
 

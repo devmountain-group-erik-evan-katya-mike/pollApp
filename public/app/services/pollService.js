@@ -17,11 +17,12 @@ app.service('pollService', function($http, $q, $state){
   }
 
   this.castVote = function(id, choice){
+      console.log(choice)
     var dfd = $q.defer();
     $http({
       method: 'PUT',
       url: '/api/poll/' + id,
-      data: {choice: choice}
+      data: choice
     }).then(function(res){
       console.log(res);
       dfd.resolve(res.data);
