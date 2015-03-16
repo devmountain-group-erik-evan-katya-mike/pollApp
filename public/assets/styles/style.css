@@ -4,6 +4,13 @@ html, body {
     height: 100%;
     /*background: rgb(240,240,240);*/
 }
+a {
+    text-decoration: none;
+}
+
+button a {
+    color: #ffffff;
+}
 
 #wrapper {
     min-height: 100%;
@@ -79,6 +86,7 @@ html, body {
 }
 .activePolls {
     margin-top: 15px;
+
 }
 /*.containerHeight {*/
     /*height: 100%;*/
@@ -94,6 +102,7 @@ html, body {
     width: 100%;
     height: 50px;
     background: rgb(51,51,51);
+
 }
 .headerDivider {
     background: rgb(58,171,218);
@@ -111,6 +120,10 @@ input.ng-invalid.ng-dirty {
     height: 60px;
     width: auto;
     display: inline-block;
+}
+.activePollsHeader {
+    display: inline-block;
+    color: #ffffff;
 }
 
 .createPollBox {
@@ -149,12 +162,17 @@ input.ng-invalid.ng-dirty {
     background: rgb(58,171,218);
     color: #ffffff;
 }
+.panel {
+    border-radius: 5px;
+
+}
 .previewButton {
     margin-top: 50px;
 }
 .panel-heading {
     height: 40px;
     color: #ffffff;
+    padding: 0px;
 }
 
 .pollTopBorder {
@@ -166,6 +184,9 @@ input.ng-invalid.ng-dirty {
     border-bottom: 2px solid rgb(58,171,218);
     margin-top: 3px;
     margin-bottom: 3px;
+    width: 98%;
+    margin-left: 1%;
+    margin-right: 1%;
 }
 .pollLogo {
     font-family: 'Arial', 'helvetia', serif;
@@ -176,8 +197,16 @@ input.ng-invalid.ng-dirty {
 .pollTemplateTitle {
     font-size: 18px;
     /*text-align: center;*/
-    border-bottom: solid 1px #d3d3d3;
+    /*border-bottom: solid 1px #d3d3d3;*/
     margin-bottom: 3px;
+    color: #000000
+}
+.pollBody {
+    margin-top: 25px;
+    color: #000000;
+}
+.panel-group {
+    margin-bottom: 1px;
 }
 .pollBottomBorder {
     background: rgb(51,51,51);
@@ -198,6 +227,10 @@ input.ng-invalid.ng-dirty {
 }
 .createPreviewBottomBorder {
     margin-top: 45px;
+}
+.addChoice {
+    display: inline-block;
+    margin-left: 5px;
 }
 .addDelete {
     display: inline-block;
@@ -221,6 +254,7 @@ input.ng-invalid.ng-dirty {
 .centeredInput {
     width: 80%;
     margin: 0 auto;
+    color: #000000;
 
 }
 .rightButtons {
@@ -231,4 +265,61 @@ input.ng-invalid.ng-dirty {
 }
 .buttonBox {
     margin-top: 10px;
+}
+.bottomHeaderBuffer {
+    margin-top: 50px;
+}
+
+.progressVotes {
+    width: 70%;
+}
+.pieChart {
+    margin: 0 auto;
+
+}
+.logoDesign {
+    width: 50px;
+    height: auto;
+    padding-top: 5px;
+}
+.voteViewLay {
+    text-align: center;
+    margin-top: 5px;
+}
+.totalVotesHeading {
+    float: right;
+    display: inline-block;
+    margin-right: 7px;
+}
+.activePollsAccordion {
+    margin-top: 10px;
+
+}
+.activePollsAccordionBody {
+    color: #000000
+}
+.activePollsRadius {
+    border-radius: 5px;
+}
+.accordTitle {
+    margin-left: 4px;
+    padding-top: 10px;
+    display: inline-block;
+    color: #ffffff;
+}
+.glyphiconActive {
+    line-height: 0px;
+    top: -10px;
+    padding-right: 3px;
+}
+.glyphiconCreate {
+    top: 11px;
+    padding-right: 3px;
+}
+.radio {
+    margin-left: 10px;
+}
+
+.panel-body {
+    padding: 0px;
 }
