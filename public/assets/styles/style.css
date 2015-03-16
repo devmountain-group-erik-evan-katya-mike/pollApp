@@ -144,7 +144,7 @@ input.ng-invalid.ng-dirty {
 .createButton {
     display: inline-block;
     float: right;
-    margin-top: 3px;
+    margin-top: -27px;
     margin-left: 5px;
     /*border-radius: 3px;*/
 }
@@ -176,7 +176,7 @@ input.ng-invalid.ng-dirty {
 }
 
 .pollTopBorder {
-    border-radius: 5px;
+    /*border-radius: 5px;*/
     background: #000000;
     height: 8px;
 }
@@ -211,7 +211,7 @@ input.ng-invalid.ng-dirty {
 .pollBottomBorder {
     background: rgb(51,51,51);
     height: 8px;
-    border-radius: 5px;
+    /*border-radius: 5px;*/
 }
 .inputChoices {
     margin-top: 5px;
@@ -341,4 +341,7 @@ input.ng-invalid.ng-dirty {
 }
 input.ng-valid.ng-dirty {
     border-color: #2ecc71;
+}
+.chartLocation {
+    margin-left: 100px;
 }
