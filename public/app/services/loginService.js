@@ -9,7 +9,7 @@ app.service("loginService", function($http, $q, $state) {
             url: "/auth/twitter"
 
         }).then(function(res) {
-            $state.go("dashboard");
+            $state.go("dashboard.activePolls");
             dfd.resolve(res);
         }, function(err) {
             dfd.reject(err)

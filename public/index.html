@@ -8,14 +8,25 @@
     <link rel="stylesheet" href="assets/styles/style.css">
 
 
+    <!--<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">-->
+
+
     <!-- JS / LIBS -->
     <script src="assets/libs/jquery/dist/jquery.min.js"></script>
     <script src="assets/libs/bootstrap/dist/js/bootstrap.min.js"></script>
+      <!--<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>-->
     <script src="assets/libs/angular/angular.min.js"></script>
+    <script src="http://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.10.0.js"></script>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
     <script src="assets/libs/angular-ui-router/release/angular-ui-router.min.js"></script>
+    <!--<script src="http://www.google.com/jsapi?ext.js"></script>-->
+
+
    <!-- <script type="text/javascript" src="assets/libs/socket.io.js"></script> -->
     <!-- APP -->
+
     <script src="app/main/app.js"></script>
+    <script src="app/main/mydirectives.js"></script>
     <script src="app/controllers/mainCtrl.js"></script>
     <script src="app/controllers/loginCtrl.js"></script>
     <script src="app/controllers/dashboardCtrl.js"></script>
@@ -31,7 +42,7 @@
     
   </head>
   <body ng-app="pollApp" ng-controller="dashboardCtrl">
-    <div id="wrapper">
+    <!--<div id="wrapper">-->
           <nav class="navbar navbar-default">
               <div class="container-fluid">
                   <div class="navbar-header">
@@ -41,15 +52,15 @@
                           <span class="icon-bar"></span>
                           <span class="icon-bar"></span>
                       </button>
-                      <a class="navbar-brand" ui-sref="home">Logo</a>
+                      <a class="navbar-brand" ui-sref="home"><img src="assets/images/Twitter-logo.png" class="logoDesign"></a>
                   </div>
 
                   <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 
                       <ul class="nav navbar-nav navbar-right">
-                          <li ng-show="user"><a ui-sref="dashboard">Dashboard</a></li>
+                          <li ng-show="user"><a ui-sref="dashboard.activePolls" ng-click="getUserPolls()">Dashboard</a></li>
                           <li ng-hide="user"><a href="/auth/twitter"><img src="assets/images/Twitter-logo.png" class="loginImg">-Login</a></li>
-                          <li ng-show="user" ng-click="logout()"><a href=""><img src="assets/images/Twitter-logo.png" class="loginImg">-Logout</a></li>
+                          <li ng-show="user"><a href="" ng-click="logout()"><img src="assets/images/Twitter-logo.png" class="loginImg">-Logout</a></li>
                       </ul>
                   </div>
               </div>
@@ -57,7 +68,8 @@
 
       <ui-view></ui-view>
 
-<footer class="footerClass"></footer>
-  </div>
+<!--<footer class="footerClass"></footer>-->
+
+  <!--</div>-->
   </body>
 </html>

@@ -1,6 +1,9 @@
-var app = angular.module("pollApp", ["ui.router"]);
+var app = angular.module("pollApp", ["ui.router", "myDirectives", "ui.bootstrap"]);
 
 app.config(function($stateProvider) {
+
+    //$urlRouterProvider
+    //    .otherwise("/home");
 
     $stateProvider
         .state("home", {
@@ -52,4 +55,4 @@ app.config(function($stateProvider) {
         })
 
 
-})
+});

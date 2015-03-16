@@ -1,89 +1,178 @@
-<!--<div class="activePolls">-->
-
-    <!--<div class="row">-->
-        <!--<div class="panel panel-info col-md-4">-->
-            <!--<div class="panel-heading">-->
-                <!--<h3 class="panel-title">Poll Title</h3>-->
-            <!--</div>-->
-            <!--<div class="panel-body">-->
-                <!--<div class="panel-body">-->
-                    <!--<div class="radio">-->
-                        <!--<label><input type="radio" name="optradio">Question 1</label>-->
-                    <!--</div>-->
-                    <!--<div class="radio">-->
-                        <!--<label><input type="radio" name="optradio">Question 2</label>-->
-                    <!--</div>-->
-                    <!--<div class="radio disabled">-->
-                        <!--<label><input type="radio" name="optradio">Question 3</label>-->
-                    <!--</div>-->
-                    <!--<button class="btn btn-info">Submit</button>-->
-                <!--</div>-->
+<!--<div class="row">-->
+<!--<form ng-repeat="key in userPolls">-->
+    <!--<div class="col-md-4 createPollBox2">-->
+        <!--<div class="pollTopBorder"></div>-->
+        <!--<div class="bottomHeaderBorder"></div>-->
+        <!--<div class="pollLogo"><img src="./assets/images/Twitter-logo.png" class="loginImg">iePolls.com</div>-->
+        <!--<div class="centeredInput">-->
+            <!--<div class="pollTemplateTitle">{{key.title}} </div>-->
+            <!--<div class="pollBody"></div>-->
+            <!--<div class="radio" ng-repeat="nestedKey in key.choices">-->
+                <!--<form>-->
+                    <!--<label>-->
+                        <!--&lt;!&ndash;<input type="radio" name="finalVote" ng-model="$parent.selectedChoice">{{choice.body}}&ndash;&gt;-->
+                        <!--<input type="radio" name="pollChoices" disabled>{{nestedKey.body}} {{nestedkey.counter}}-->
+                        <!--<br/>-->
+                    <!--</label>-->
+                <!--</form>-->
             <!--</div>-->
         <!--</div>-->
 
-        <!--<div class="panel panel-primary col-md-4">-->
-            <!--<div class="panel-heading">-->
-                <!--<h3 class="panel-title">Poll Title</h3>-->
-            <!--</div>-->
-            <!--<div class="panel-body">-->
-                <!--<div class="panel-body">-->
-                    <!--<div class="radio">-->
-                        <!--<label><input type="radio" name="optradio">Question 1</label>-->
-                    <!--</div>-->
-                    <!--<div class="radio">-->
-                        <!--<label><input type="radio" name="optradio">Question 2</label>-->
-                    <!--</div>-->
-                    <!--<div class="radio disabled">-->
-                        <!--<label><input type="radio" name="optradio">Question 3</label>-->
-                    <!--</div>-->
-                    <!--<button class="btn btn-primary">Submit</button>-->
-                <!--</div>-->
-            <!--</div>-->
-        <!--</div>-->
-        <!--<div class="panel panel-success col-md-4">-->
-            <!--<div class="panel-heading">-->
-                <!--<h3 class="panel-title">Poll Title</h3>-->
-            <!--</div>-->
-            <!--<div class="panel-body">-->
-                <!--<div class="panel-body">-->
-                    <!--<div class="radio">-->
-                        <!--<label><input type="radio" name="optradio">Question 1</label>-->
-                    <!--</div>-->
-                    <!--<div class="radio">-->
-                        <!--<label><input type="radio" name="optradio">Question 2</label>-->
-                    <!--</div>-->
-                    <!--<div class="radio disabled">-->
-                        <!--<label><input type="radio" name="optradio">Question 3</label>-->
-                    <!--</div>-->
-                    <!--<button class="btn btn-success">Submit</button>-->
-                <!--</div>-->
-            <!--</div>-->
-        <!--</div>-->
+        <!--<div class="bottomHeaderBorder createPreviewBottomBorder"></div>-->
+        <!--<div class="pollBottomBorder"></div>-->
+
+
     <!--</div>-->
+<!--</form>-->
 <!--</div>-->
 
-<div class="activePolls">
+<div class="container">
+    <!--<div class="col-md-6">-->
+        <!--<div class="row">-->
+                <!--<div class="panel-heading activePollsAccordion">-->
+                    <!--<div class="panel-group" id="accordion">-->
+                            <!--&lt;!&ndash;<div class="panel panel-default">&ndash;&gt;-->
+                                <!--&lt;!&ndash;<div class="panel-heading">&ndash;&gt;-->
+                                    <!--&lt;!&ndash;<div class="panel-title">&ndash;&gt;-->
+                                        <!--&lt;!&ndash;<a class="accordion-toggle"  data-toggle="collapse" data-parent="#myaccordion" href="#first">&ndash;&gt;-->
+                                            <!--&lt;!&ndash;{{}}&ndash;&gt;-->
+                                        <!--&lt;!&ndash;</a><i class="indicator glyphicon glyphicon-chevron-down  pull-right"></i>&ndash;&gt;-->
+                                    <!--&lt;!&ndash;</div>&ndash;&gt;-->
+                                <!--&lt;!&ndash;</div>&ndash;&gt;-->
+                                <!--&lt;!&ndash;<div id="first" class="accordion-body collapse">&ndash;&gt;-->
+                                    <!--&lt;!&ndash;<div class="accordion-inner">&ndash;&gt;-->
+                                        <!--&lt;!&ndash;<div class="centeredInput">&ndash;&gt;-->
+                                            <!--&lt;!&ndash;<label>Poll Question</label>&ndash;&gt;-->
+                                            <!--&lt;!&ndash;<div>&ndash;&gt;-->
 
-    <div class="row">
-        <span ng-repeat="key in userPolls">
-        <div class="panel panel-info col-md-4">
-            <div class="panel-heading">
-                <h3 class="panel-title">{{key.title}}</h3>
-            </div>
-            <div class="panel-body">
-                <div class="panel-body">
-                    <div class="radio" ng-repeat="nestedKey in key.choices">
-                        <label><input type="radio" disabled>{{nestedKey.body}} - {{nestedKey.counter}}</label>
+                                                <!--&lt;!&ndash;<input type="text"&ndash;&gt;-->
+                                                       <!--&lt;!&ndash;name="pollTitle"&ndash;&gt;-->
+                                                       <!--&lt;!&ndash;class="form-control inputCushion"&ndash;&gt;-->
+                                                       <!--&lt;!&ndash;ng-minlength="1"&ndash;&gt;-->
+                                                       <!--&lt;!&ndash;placeholder="What question would you like to poll?"&ndash;&gt;-->
+                                                       <!--&lt;!&ndash;ng-model="title"&ndash;&gt;-->
+                                                       <!--&lt;!&ndash;required>&ndash;&gt;-->
+                                            <!--&lt;!&ndash;</div>&ndash;&gt;-->
+                                            <!--&lt;!&ndash;<span ng-show="frm.pollTitle.$dirty && frm.pollTitle.$error.required" class="questionRequired">Question Required</span>&ndash;&gt;-->
+                                        <!--&lt;!&ndash;</div><br/>&ndash;&gt;-->
+                                        <!--&lt;!&ndash;<div></div>&ndash;&gt;-->
 
+                                    <!--&lt;!&ndash;</div>&ndash;&gt;-->
+                                <!--&lt;!&ndash;</div>&ndash;&gt;-->
+
+                            <!--&lt;!&ndash;</div>&ndash;&gt;-->
+
+                            <!--&lt;!&ndash;<div class="panel panel-default">&ndash;&gt;-->
+                                <!--&lt;!&ndash;<div class="panel-heading">&ndash;&gt;-->
+                                    <!--&lt;!&ndash;<div class="panel-title">&ndash;&gt;-->
+                                        <!--&lt;!&ndash;<a class="accordion-toggle"  data-toggle="collapse" data-parent="#myaccordion" href="#second">&ndash;&gt;-->
+                                            <!--&lt;!&ndash;Step Two - Enter Poll Choices&ndash;&gt;-->
+                                        <!--&lt;!&ndash;</a><i class="indicator glyphicon glyphicon-chevron-down  pull-right"></i>&ndash;&gt;-->
+                                    <!--&lt;!&ndash;</div>&ndash;&gt;-->
+
+                                <!--&lt;!&ndash;</div>&ndash;&gt;-->
+                                <!--&lt;!&ndash;<div id="second" class="accordion-body collapse">&ndash;&gt;-->
+                                    <!--&lt;!&ndash;<div class="accordion-inner">&ndash;&gt;-->
+                                        <!--&lt;!&ndash;<div class="centeredInput">&ndash;&gt;-->
+                                            <!--&lt;!&ndash;<div class="pollBody"></div>&ndash;&gt;-->
+                                            <!--&lt;!&ndash;<div ng-repeat="choice in choices" class="inputChoices">&ndash;&gt;-->
+                                                <!--&lt;!&ndash;<input type="text" name="pollChoices" class="form-control"  placeholder="Enter poll choice"  ng-minlength="1" ng-model="choice.option" required><br/>&ndash;&gt;-->
+                                            <!--&lt;!&ndash;</div>&ndash;&gt;-->
+                                            <!--&lt;!&ndash;<div class="addChoice"><a ng-click="addNewChoice()">Add Choice</a></div>&ndash;&gt;-->
+                                            <!--&lt;!&ndash;<div class="addChoice"><a ng-click="deleteChoice()">Delete Choice</a></div>&ndash;&gt;-->
+                                            <!--&lt;!&ndash;<br/>&ndash;&gt;-->
+                                        <!--&lt;!&ndash;</div>&ndash;&gt;-->
+                                    <!--&lt;!&ndash;</div>&ndash;&gt;-->
+                                <!--&lt;!&ndash;</div>&ndash;&gt;-->
+                            <!--&lt;!&ndash;</div>&ndash;&gt;-->
+
+                            <!--<div class="panel panel-primary">-->
+                                <!--<div class="panel-heading">-->
+                                    <!--<div class="panel-title">-->
+                                       <!--<div class="activePollsHeader">Poll Questions</div><div class="totalVotesHeading">Total Votes</div>-->
+                                    <!--</div>-->
+                                <!--</div>-->
+                             <!--</div>-->
+
+
+
+                        <!--<div class="panel panel-primary" ng-repeat="key in userPolls">-->
+                            <!--<div class="panel-heading">-->
+                                <!--<div class="panel-title">-->
+                                    <!--&lt;!&ndash;<a class="accordion-toggle"  data-toggle="collapse" data-parent="#myaccordion"  href="#three" >&ndash;&gt;-->
+                                        <!--<a class="accordion-toggle"  href=""  ng-click="accordion = true">-->
+                                        <!--{{key.title}}-->
+                                        <!--&lt;!&ndash;href="#three"&ndash;&gt;-->
+                                    <!--</a><i class="indicator glyphicon glyphicon-chevron-down  pull-right"></i>-->
+                                <!--</div>-->
+                            <!--</div>-->
+                                <!--&lt;!&ndash;<div id="three" class="accordion-body collapse">&ndash;&gt;-->
+                                    <!--<div id="three" class="accordion-body" ng-show="accordion">-->
+                                    <!--<div class="accordion-inner">-->
+                                        <!--<div class="centeredInput">-->
+                                            <!--&lt;!&ndash;<div class="pollTemplateTitle">{{key.title}} </div>&ndash;&gt;-->
+                                                <!--<div class="pollBody">-->
+                                                    <!--<div class="radio" ng-repeat="nestedKey in key.choices">-->
+                                                        <!--<label>-->
+                                                            <!--<input type="radio" ng-model="choices"  disabled>{{nestedKey.body}} {{nestedKey.counter}}-->
+
+                                                        <!--</label>-->
+                                                    <!--</div>-->
+                                                <!--</div>-->
+                                        <!--</div>-->
+
+                                            <!--<div class="Vote"></div><div class="viewResultsTemplate"></div>-->
+                                                <!--&lt;!&ndash;<div class="rightButtons">&ndash;&gt;-->
+                                                    <!--&lt;!&ndash;<button class="createButton btn btn-primary btn-xs" ng-click="createPoll()">Submit</button>&ndash;&gt;-->
+                                                <!--&lt;!&ndash;</div>&ndash;&gt;-->
+                                                    <!--&lt;!&ndash;<div class="bottomHeaderBorder createPreviewBottomBorder bottomHeaderBuffer"></div>&ndash;&gt;-->
+                                                        <!--&lt;!&ndash;<div class="pollBottomBorder"></div>&ndash;&gt;-->
+                                        <!--<br />-->
+                                        <!--<br />-->
+                                    <!--</div>-->
+                                <!--</div>-->
+
+                        <!--</div>-->
+                    <!--</div>-->
+                <!--</div>-->
+
+        <!--</div>-->
+     <!--</div>-->
+        <div class="col-md-6">
+            <div class="row">
+                <div class="panel-heading activePollsAccordion">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <div class="panel-title">
+                                <div class="activePollsHeader accordTitle">Active Polls</div><div class="totalVotesHeading accordTitle">Total Votes</div>
+                            </div>
+                        </div>
                     </div>
 
-                    <!--<button class="btn btn-info">Submit</button>-->
+                  <accordion close-others="true" ng-repeat="key in userPolls" class="panel-heading">
+                      <accordion-group is-open="isopen" class=" panel-primary" id="accordion">
+                          <accordion-heading class="panel panel-heading ">
+
+                              <div class="panel-title activepollsradius">
+                                <a href="" ><div class="accordTitle">{{key.title}}</div></a><div class="glyphIcon"><i class="indicator glyphiconActive glyphicon glyphicon-chevron-down  pull-right"></i></div>
+                              </div>
+                          </accordion-heading>
+
+                          <div class="radio activePollsAccordionBody" ng-repeat="nestedKey in key.choices">
+                              <label>
+                                  <input type="radio" ng-model="choices"  disabled>{{nestedKey.body}} {{nestedKey.counter}}
+                              </label>
+                          </div>
+                        <button class="createButton btn btn-primary btn-xs"><a ui-sref="poll">View Poll</a></button>
+                      </accordion-group>
+                  </accordion>
                 </div>
             </div>
-        </div>
-        </span>
-    </div>
+         </div>
+        <div class="col-md-6"></div>
 </div>
+
+
 
 
 
