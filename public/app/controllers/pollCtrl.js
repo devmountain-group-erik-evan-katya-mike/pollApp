@@ -9,11 +9,13 @@ app.controller('pollCtrl', function($scope, $stateParams, $interval, poll, pollS
 
 
     var chartInfo = function() {
+        var newChartData = [];
         for (var i = 0; i < $scope.poll.choices.length; i++) {
             var newArr = [];
             newArr.push($scope.poll.choices[i].body, $scope.poll.choices[i].counter);
-            $scope.chartData.push(newArr);
+            newChartData.push(newArr);
         }
+        $scope.chartData = newChartData;
         console.log($scope.chartData);
     }
 
@@ -60,13 +62,13 @@ app.controller('pollCtrl', function($scope, $stateParams, $interval, poll, pollS
 //            var data = new google.visualization.DataTable();
 //            data.addColumn('string', 'Choices');
 //            data.addColumn('number', 'Votes');
-//            //data.addRows([
-//            //    ['College',3],
-//            //    ['Onions', 1],
-//            //    ['Olives', 1],
-//            //    ['Zucchini', 1],
-//            //    ['Pepperoni', 2]
-//            //]);
+//            data.addRows([
+//                ['College',3],
+//                ['Onions', 1],
+//                ['Olives', 1],
+//                ['Zucchini', 1],
+//                ['Pepperoni', 2]
+//            ]);
 //            console.log("line 152", $scope.chartData);
 //            data.addRows($scope.chartData);
 //
@@ -83,8 +85,9 @@ app.controller('pollCtrl', function($scope, $stateParams, $interval, poll, pollS
 //    }
 //});
 //
-//    google.setOnLoadCallback(function() {
-//    angular.bootstrap(document.body, ['pollApp']);
-//    });
 //
 //    google.load('visualization', '1', {packages: ['corechart']});
+//
+//google.setOnLoadCallback(function() {
+//    angular.bootstrap(document.body, []);
+//});

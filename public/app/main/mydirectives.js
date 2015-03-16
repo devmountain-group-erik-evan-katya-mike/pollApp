@@ -10,16 +10,29 @@ app.directive("chart", function() {
             var data = new google.visualization.DataTable();
             data.addColumn('string', 'Choices');
             data.addColumn('number', 'Votes');
-            data.addRows([
-                ['College',3],
-                ['Onions', 1],
-                ['Olives', 1],
-                ['Zucchini', 1],
-                ['Pepperoni', 2]
-            ]);
             //data.addRows([
-            //    $scope.chartData
+            //    ['College',3],
+            //    ['Onions', 1],
+            //    ['Olives', 1],
+            //    ['Zucchini', 1],
+            //    ['Pepperoni', 2]
             //]);
+            //$scope.$apply(function(){
+            //
+            //});
+
+            $scope.$watch(function(scope){
+                return scope.chartData;
+            }, function(oldVal, newVal){
+                data.addRows(
+                    newVal
+                );
+                var chart = new google.visualization.PieChart($elm[0]);
+                chart.draw(data, options);
+            })
+
+
+
             console.log("line 152", $scope.chartData);
             //data.addRows($scope.chartData);
 
@@ -32,17 +45,16 @@ app.directive("chart", function() {
             };
 
             // Instantiate and draw our chart, passing in some options.
-            var chart = new google.visualization.PieChart($elm[0]);
-            chart.draw(data, options);
+
         }
     }
 });
 
-//google.load('visualization', '1', {packages: ['corechart']});
-//
-//google.setOnLoadCallback(function() {
-//    angular.bootstrap(document.body, []);
-//});
+google.load('visualization', '1', {packages: ['corechart']});
+
+google.setOnLoadCallback(function() {
+    angular.bootstrap(document.body, []);
+});
 
 
 
