@@ -1,313 +1,132 @@
-<!--<form name="frm">-->
-    <!--<div class="row createPollBox2">-->
-        <!--<div class="col-md-4" ng-hide="firstBox">-->
-            <!--<div class="pollTopBorder"></div>-->
-            <!--<div class="bottomHeaderBorder"></div>-->
-            <!--<div class="pollLogo"><img src="./assets/images/Twitter-logo.png" class="loginImg">iePolls.com</div>-->
-                <!--<div class="centeredInput">-->
-                    <!--<label>Poll Question</label>-->
-                <!--<div>-->
-
-                    <!--<input type="text"-->
-                           <!--name="pollTitle"-->
-                           <!--class="form-control inputCushion"-->
-                           <!--ng-minlength="1"-->
-                           <!--placeholder="What question would you like to poll?"-->
-                           <!--ng-model="title"-->
-                           <!--required>-->
-                <!--</div>-->
-                    <!--<span ng-show="frm.pollTitle.$dirty && frm.pollTitle.$error.required" class="questionRequired">Question Required</span>-->
-                    <!--&lt;!&ndash;<div class="rightButtons">&ndash;&gt;-->
-                        <!--<div><button class="createButton btn btn-primary btn-xs" ng-click="toggleBox()" ng-disabled="frm.$invalid">Create</button><div class="cancel"><a ui-sref="dashboard">Cancel</a></div>-->
-                    <!--</div>-->
-                    <!--&lt;!&ndash;</div>&ndash;&gt;-->
-                <!--</div>-->
-            <!--<div class="bottomHeaderBorder createPollBottomBorder bottomHeaderBuffer"></div>-->
-            <!--<div class="pollBottomBorder"></div>-->
-
-            <!--</div>-->
-        <!--</div>-->
-    <!--</div>-->
-<!--</form>-->
-
-
-
-
-
-<!--<div class="col-md-4" ng-show="secondBox"></div>-->
-
-
-
-<!--<form name="frm1">-->
-    <!--<div class="col-md-4" ng-show="secondBox">-->
-    <!--<div class="pollTopBorder"></div>-->
-    <!--<div class="bottomHeaderBorder"></div>-->
-    <!--<div class="pollLogo"><img src="./assets/images/Twitter-logo.png" class="loginImg">iePolls.com</div>-->
-        <!--<div class="centeredInput">-->
-            <!--<div class="pollTemplateTitle">{{title}} </div>-->
-            <!--<div class="pollBody"></div>-->
-               <!--<div ng-repeat="choice in choices" class="inputChoices">-->
-                    <!--<input type="text" name="pollChoices" class="form-control"  placeholder="Enter poll choice"  ng-minlength="1" ng-model="choice.option" required><br/>-->
-                <!--</div>-->
-        <!--</div>-->
-        <!--&lt;!&ndash;<div class="Vote"></div><div class="viewResultsTemplate"></div>&ndash;&gt;-->
-        <!--<div class="rightButtons">-->
-            <!--<button class="createButton btn btn-primary btn-xs" ng-click="toggleForward()" ng-disabled="frm1.$invalid">Preview</button>-->
-            <!--<button class="createButton btn btn-primary btn-xs" ng-click="toggleBack()">Back</button>-->
-            <!--<div class="cancel"><a ui-sref="dashboard">Cancel</a></div>-->
-        <!--</div>-->
-            <!--<div class="leftButtons">-->
-                <!--<div class="addNewNumber addDelete"><a ng-click="addNewChoice()">Add Choice</a></div>-->
-                <!--<div class="deleteOption addDelete"><a ng-click="deleteChoice()">Delete Choice</a></div>-->
-            <!--</div>-->
-        <!--<div class="bottomHeaderBorder createPollBottomBorder bottomHeaderBuffer"></div>-->
-        <!--<div class="pollBottomBorder"></div>-->
-
-
-    <!--</div>-->
-<!--</form>-->
-
-
-    <!--<div class="col-md-4" ng-hide="secondBox"></div>-->
-    <!--<div class="col-md-4" ng-show="firstBox"></div>-->
-
-
-
-
-        <!--<form>-->
-            <!--<div class="col-md-4" ng-show="thirdBox">-->
-                <!--<div class="pollTopBorder"></div>-->
-                <!--<div class="bottomHeaderBorder"></div>-->
-                <!--<div class="pollLogo"><img src="./assets/images/Twitter-logo.png" class="loginImg">iePolls.com</div>-->
-                <!--<div class="centeredInput">-->
-                    <!--<div class="pollTemplateTitle">{{title}} </div>-->
-                    <!--<div class="pollBody"></div>-->
-                <!--<div class="radio" ng-repeat="key in choices">-->
-                    <!--<label>-->
-                        <!--<input type="radio" ng-model="choices"  disabled>{{key.option}}-->
-
-                    <!--</label>-->
-                <!--</div>-->
-                <!--</div>-->
-
-                <!--<div class="Vote"></div><div class="viewResultsTemplate"></div>-->
-                    <!--<div class="rightButtons">-->
-                        <!--<button class="createButton btn btn-primary btn-xs" ng-click="createPoll()">Submit</button>-->
-                        <!--<button class="createButton btn btn-primary btn-xs" ng-click="toggleFinalBack()">Back</button>-->
-                        <!--<div class="cancel"><a ui-sref="dashboard">Cancel</a></div>-->
-                    <!--</div>-->
-                <!--<div class="bottomHeaderBorder createPreviewBottomBorder bottomHeaderBuffer"></div>-->
-                <!--<div class="pollBottomBorder"></div>-->
-
-
-            <!--</div>-->
-        <!--</form>-->
-<!--</div>-->
 
 <div class="container">
     <div class="row">
      <div class="col-md-6">
 
-
-                <!--<div class="panel panel-primary activePollsAccordion">-->
-                    <!--<div class="panel-heading">-->
-                        <!--<div class="panel-title">-->
-                            <!--<div class="activePollsHeader accordTitle">Create a New Poll</div>-->
-                        <!--</div>-->
-                    <!--</div>-->
-                <!--</div>-->
-
-                <!--<accordion close-others="true" class="panel-heading">-->
-                    <!--<accordion-group is-open="isopen" class=" panel-primary" id="accordion">-->
-                        <!--<accordion-heading class="panel panel-heading ">-->
-
-                            <!--<div class="panel-title activepollsradius">-->
-                                <!--<a href="" ><div class="accordTitle">Step One - Enter a Question</div></a><div class="glyphIcon"><i class="indicator glyphiconActive glyphicon glyphicon-chevron-down  pull-right"></i></div>-->
-                            <!--</div>-->
-                        <!--</accordion-heading>-->
-                        <!--<div class="centeredInput">-->
-                            <!--<label>Poll Question</label>-->
-                            <!--<div>-->
-
-                                <!--<input type="text"-->
-                                       <!--name="pollTitle"-->
-                                       <!--class="form-control inputCushion"-->
-                                       <!--ng-minlength="1"-->
-                                       <!--placeholder="What question would you like to poll?"-->
-                                       <!--ng-model="title"-->
-                                       <!--required>-->
-                            <!--</div>-->
-                            <!--<span ng-show="frm.pollTitle.$dirty && frm.pollTitle.$error.required" class="questionRequired">Question Required</span>-->
-                        <!--</div><br/>-->
-                    <!--</accordion-group>-->
-                <!--</accordion>-->
-
-                <!--<accordion close-others="true" class="panel-heading">-->
-                    <!--<accordion-group is-open="isopen" class=" panel-primary" id="accordion">-->
-                        <!--<accordion-heading class="panel panel-heading ">-->
-
-                            <!--<div class="panel-title activepollsradius">-->
-                                <!--<a href="" ><div class="accordTitle">Step Two - Enter Poll Choices</div></a><div class="glyphIcon"><i class="indicator glyphiconActive glyphicon glyphicon-chevron-down  pull-right"></i></div>-->
-                            <!--</div>-->
-                        <!--</accordion-heading>-->
-                        <!--<div class="centeredInput">-->
-                            <!--<div class="pollBody"></div>-->
-                            <!--<div ng-repeat="choice in choices" class="inputChoices">-->
-                                <!--<input type="text" name="pollChoices" class="form-control"  placeholder="Enter poll choice"  ng-minlength="1" ng-model="choice.option" required><br/>-->
-                            <!--</div>-->
-                            <!--<div class="addChoice"><a ng-click="addNewChoice()">Add Choice</a></div>-->
-                            <!--<div class="addChoice"><a ng-click="deleteChoice()">Delete Choice</a></div>-->
-                            <!--<br/>-->
-                        <!--</div>-->
-                    <!--</accordion-group>-->
-                <!--</accordion>-->
-
-                <!--<accordion close-others="true" class="panel-heading">-->
-                    <!--<accordion-group is-open="isopen" class=" panel-primary" id="accordion">-->
-                        <!--<accordion-heading class="panel panel-heading ">-->
-
-                            <!--<div class="panel-title activepollsradius">-->
-                                <!--<a href="" ><div class="accordTitle">Step three - Review and Submit</div></a><div class="glyphIcon"><i class="indicator glyphiconActive glyphicon glyphicon-chevron-down  pull-right"></i></div>-->
-                            <!--</div>-->
-                        <!--</accordion-heading>-->
-                        <!--<div class="centeredInput">-->
-                            <!--<div class="pollTemplateTitle">{{title}} </div>-->
-                            <!--<div class="pollBody"></div>-->
-                            <!--<div class="radio" ng-repeat="key in choices">-->
-                                <!--<label>-->
-                                    <!--<input type="radio" ng-model="choices"  disabled>{{key.option}}-->
-
-                                <!--</label>-->
-                            <!--</div>-->
-                        <!--</div>-->
-
-                        <!--<div class="Vote"></div><div class="viewResultsTemplate"></div>-->
-                        <!--<div class="rightButtons">-->
-                            <!--<button class="createButton btn btn-primary btn-xs" ng-click="createPoll()">Submit</button>-->
-                        <!--</div>-->
-                        <!--<br />-->
-                        <!--<br />-->
-                    <!--</accordion-group>-->
-                <!--</accordion>-->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                <div class="panel panel-primary activePollsAccordion">
-                    <div class="panel-heading">
-                        <div class="panel-title">
-                        <div class="activePollsHeader accordTitle">Create a New Poll</div>
-                    </div>
-                 </div>
+         <form class="createPollForm" name="createPollFrm" novalidate>
+             <div class="form-group">
+                 <label for="pollQuestion">Create a New Poll</label>
+                 <input type="text" name="title" class="form-control" id="pollQuestion" placeholder="Enter Question" ng-model="title" required>
+                 <span ng-show="createPollFrm.title.$dirty && createPollFrm.title.$error.required" class="questionRequired">
+                     Question Required
+                 </span>
              </div>
+             <label>Enter Poll Options</label>
+             <div ng-repeat="choice in choices" class="inputChoices">
+                 <input type="text" name="pollChoices" class="form-control"  placeholder="Enter poll choice"  ng-minlength="1" ng-model="choice.option" required>
+                 <span ng-show="createPollFrm.pollChoices.$dirty && createPollFrm.pollChoices.$invalid" class="questionRequired"></span>
+                     <!--<span ng-show="createPollFrm.pollChoices.$error.required">Poll Choice is Required</span>-->
+                 <!--</span>-->
+                 <br/>
 
 
-                <!--<div class="span12">-->
-                    <!--<div>Create a New Poll</div>-->
-                            <div class="panel-group" id="accordion">
-                                <div class="panel panel-primary">
-                                    <div class="panel-heading">
+             </div>
+             <div>
+             <div class="addChoice"><a ng-click="addNewChoice()">Add Choice</a></div>
+             <div class="addChoice"><a ng-click="deleteChoice()">Delete Choice</a></div>
+             <br/>
 
-                                        <div class="panel-title">
 
-                                            <a class="accordion-toggle"  data-toggle="collapse" data-parent="#myaccordion" href="#first">
-                                                <div class="accordTitle">Step One - Enter a Question</div>
-                                            </a><i class="indicator glyphiconCreate glyphicon glyphicon-chevron-down  pull-right"></i>
-                                        </div>
-                                    </div>
-                                        <div id="first" class="accordion-body collapse" >
-                                            <div class="accordion-inner">
-                                                <div class="centeredInput">
-                                                    <label>Poll Question</label>
-                                                        <div>
+             <button ng-disabled="createPollFrm.$invalid" type="submit" class="btn btn-primary btn-xs createButton" ng-click="createPoll()" >Submit</button>
+             </div>
+         </form>
 
-                                                            <input type="text"
-                                                            name="pollTitle"
-                                                            class="form-control inputCushion"
-                                                            ng-minlength="1"
-                                                            placeholder="What question would you like to poll?"
-                                                            ng-model="title"
-                                                            required>
-                                                        </div>
-                                                            <span ng-show="frm.pollTitle.$dirty && frm.pollTitle.$error.required" class="questionRequired">Question Required</span>
-                                                </div><br/>
-                                                <div></div>
 
-                                            </div>
-                                        </div>
 
-                                </div>
 
-                        <div class="panel panel-primary">
-                            <div class="panel-heading">
-                                <div class="panel-title">
-                                    <a class="accordion-toggle"  data-toggle="collapse" data-parent="#myaccordion" href="#second">
-                                        <div class="accordTitle">Step Two - Enter Poll Choices</div>
-                                    </a><i class="indicator glyphiconCreate glyphicon glyphicon-chevron-down  pull-right"></i>
-                                </div>
 
-                            </div>
-                                <div id="second" class="accordion-body collapse">
-                                    <div class="accordion-inner">
-                                        <div class="centeredInput">
-                                            <div class="pollBody"></div>
-                                                <div ng-repeat="choice in choices" class="inputChoices">
-                                                    <input type="text" name="pollChoices" class="form-control"  placeholder="Enter poll choice"  ng-minlength="1" ng-model="choice.option" required><br/>
-                                                </div>
-                                                    <div class="addChoice"><a ng-click="addNewChoice()">Add Choice</a></div>
-                                                    <div class="addChoice"><a ng-click="deleteChoice()">Delete Choice</a></div>
-                                                    <br/>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                            <!--<div class="panel-group" id="accordion">-->
+                                <!--<div class="panel panel-primary">-->
+                                    <!--<div class="panel-heading">-->
 
-                        <div class="panel panel-primary">
-                            <div class="panel-heading">
-                                <div class="panel-title">
-                                    <a class="accordion-toggle"  data-toggle="collapse" data-parent="#myaccordion" href="#three">
-                                        <div class="accordTitle">Step three - Review and Submit</div>
-                                    </a><i class="indicator glyphiconCreate glyphicon glyphicon-chevron-down  pull-right"></i>
-                                </div>
-                            </div>
-                                <div id="three" class="accordion-body collapse">
-                                    <div class="accordion-inner">
-                                        <div class="centeredInput">
-                                            <div class="pollTemplateTitle">{{title}} </div>
-                                                <div class="pollBody"></div>
-                                                    <div class="radio" ng-repeat="key in choices">
-                                                        <label>
-                                                            <input type="radio" ng-model="choices"  disabled>{{key.option}}
+                                        <!--<div class="panel-title">-->
 
-                                                        </label>
-                                                    </div>
-                                        </div>
+                                            <!--<a class="accordion-toggle"  data-toggle="collapse" data-parent="#myaccordion" href="#first">-->
+                                                <!--<div class="accordTitle">Step One - Enter a Question</div>-->
+                                            <!--</a><i class="indicator glyphiconCreate glyphicon glyphicon-chevron-down  pull-right"></i>-->
+                                        <!--</div>-->
+                                    <!--</div>-->
+                                        <!--<div id="first" class="accordion-body collapse" >-->
+                                            <!--<div class="accordion-inner">-->
+                                                <!--<div class="centeredInput">-->
+                                                    <!--<label>Poll Question</label>-->
+                                                        <!--<div>-->
 
-                                            <div class="Vote"></div><div class="viewResultsTemplate"></div>
-                                                <div class="rightButtons">
-                                                    <button class="createButton btn btn-primary btn-xs" ng-click="createPoll()">Submit</button>
-                                                </div>
-                                        <br />
-                                        <br />
-                                            <!--<div class="bottomHeaderBorder createPreviewBottomBorder bottomHeaderBuffer"></div>-->
-                                        <!--<div class="pollBottomBorder"></div>-->
-                                    </div>
-                                </div>
+                                                            <!--<input type="text"-->
+                                                            <!--name="pollTitle"-->
+                                                            <!--class="form-control inputCushion"-->
+                                                            <!--ng-minlength="1"-->
+                                                            <!--placeholder="What question would you like to poll?"-->
+                                                            <!--ng-model="title"-->
+                                                            <!--required>-->
+                                                        <!--</div>-->
+                                                            <!--<span ng-show="frm.pollTitle.$dirty && frm.pollTitle.$error.required" class="questionRequired">Question Required</span>-->
+                                                <!--</div><br/>-->
+                                                <!--<div></div>-->
 
-                            </div>
-                        </div>
+                                            <!--</div>-->
+                                        <!--</div>-->
+
+                                <!--</div>-->
+
+                        <!--<div class="panel panel-primary">-->
+                            <!--<div class="panel-heading">-->
+                                <!--<div class="panel-title">-->
+                                    <!--<a class="accordion-toggle"  data-toggle="collapse" data-parent="#myaccordion" href="#second">-->
+                                        <!--<div class="accordTitle">Step Two - Enter Poll Choices</div>-->
+                                    <!--</a><i class="indicator glyphiconCreate glyphicon glyphicon-chevron-down  pull-right"></i>-->
+                                <!--</div>-->
+
+                            <!--</div>-->
+                                <!--<div id="second" class="accordion-body collapse">-->
+                                    <!--<div class="accordion-inner">-->
+                                        <!--<div class="centeredInput">-->
+                                            <!--<div class="pollBody"></div>-->
+                                                <!--<div ng-repeat="choice in choices" class="inputChoices">-->
+                                                    <!--<input type="text" name="pollChoices" class="form-control"  placeholder="Enter poll choice"  ng-minlength="1" ng-model="choice.option" required><br/>-->
+                                                <!--</div>-->
+                                                    <!--<div class="addChoice"><a ng-click="addNewChoice()">Add Choice</a></div>-->
+                                                    <!--<div class="addChoice"><a ng-click="deleteChoice()">Delete Choice</a></div>-->
+                                                    <!--<br/>-->
+                                        <!--</div>-->
+                                    <!--</div>-->
+                                <!--</div>-->
+                            <!--</div>-->
+
+                        <!--<div class="panel panel-primary">-->
+                            <!--<div class="panel-heading">-->
+                                <!--<div class="panel-title">-->
+                                    <!--<a class="accordion-toggle"  data-toggle="collapse" data-parent="#myaccordion" href="#three">-->
+                                        <!--<div class="accordTitle">Step three - Review and Submit</div>-->
+                                    <!--</a><i class="indicator glyphiconCreate glyphicon glyphicon-chevron-down  pull-right"></i>-->
+                                <!--</div>-->
+                            <!--</div>-->
+                                <!--<div id="three" class="accordion-body collapse">-->
+                                    <!--<div class="accordion-inner">-->
+                                        <!--<div class="centeredInput">-->
+                                            <!--<div class="pollTemplateTitle">{{title}} </div>-->
+                                                <!--<div class="pollBody"></div>-->
+                                                    <!--<div class="radio" ng-repeat="key in choices">-->
+                                                        <!--<label>-->
+                                                            <!--<input type="radio" ng-model="choices"  disabled>{{key.option}}-->
+
+                                                        <!--</label>-->
+                                                    <!--</div>-->
+                                        <!--</div>-->
+
+                                            <!--<div class="Vote"></div><div class="viewResultsTemplate"></div>-->
+                                                <!--<div class="rightButtons">-->
+                                                    <!--<button class="createButton btn btn-primary btn-xs" ng-click="createPoll()">Submit</button>-->
+                                                <!--</div>-->
+                                        <!--<br />-->
+                                        <!--<br />-->
+                                            <!--&lt;!&ndash;<div class="bottomHeaderBorder createPreviewBottomBorder bottomHeaderBuffer"></div>&ndash;&gt;-->
+                                        <!--&lt;!&ndash;<div class="pollBottomBorder"></div>&ndash;&gt;-->
+                                    <!--</div>-->
+                                <!--</div>-->
+
+                            <!--</div>-->
+                        <!--</div>-->
 
 
 

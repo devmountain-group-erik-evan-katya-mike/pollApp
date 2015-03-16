@@ -13,7 +13,9 @@ app.controller("createPollCtrl", function($scope, $rootScope, pollService, authS
         $scope.choices.push({id:'choice'+ newItemNumber});
     };
     $scope.deleteChoice = function() {
-        $scope.choices.pop();
+        if ($scope.choices.length > 2) {
+            $scope.choices.pop();
+        }
     }
 
     $scope.createPoll = function(){
@@ -31,6 +33,8 @@ app.controller("createPollCtrl", function($scope, $rootScope, pollService, authS
 
 
     };
+
+
 
     function toggleChevron(e) {
         $(e.target)

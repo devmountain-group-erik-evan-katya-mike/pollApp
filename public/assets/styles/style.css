@@ -108,8 +108,8 @@ button a {
     background: rgb(58,171,218);
     padding-left: 0;
     padding-right: 0;
-    height: 15px;
-    border-radius: 5px;
+    height: 5px;
+    /*border-radius: 5px;*/
     /*background: url(../images/clean-textile.jpg);*/
 }
 input.ng-invalid.ng-dirty {
@@ -146,7 +146,7 @@ input.ng-invalid.ng-dirty {
     float: right;
     margin-top: 3px;
     margin-left: 5px;
-    border-radius: 3px;
+    /*border-radius: 3px;*/
 }
 .col-md-4 {
     padding-right: 0;
@@ -322,4 +322,23 @@ input.ng-invalid.ng-dirty {
 
 .panel-body {
     padding: 0px;
+}
+.createPollForm {
+    margin-top: 10px;
+    /*border: solid 1px #000000;*/
+}
+form[novalidate] input {
+    border-left-width: 8px;
+    border-color: #3498db;
+    border-style: solid;
+}
+input[required].ng-pristine {
+    /*border-color: #e74c3d;*/
+    border-color: #808080;
+}
+input.ng-invalid.ng-dirty {
+    border-color: #e74c3c;
+}
+input.ng-valid.ng-dirty {
+    border-color: #2ecc71;
 }
