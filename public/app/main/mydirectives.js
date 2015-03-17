@@ -38,7 +38,8 @@ app.directive("chart", function() {
 
 
             // Set chart options
-            var options = {'title':$scope.poll.title,
+            var options = {
+                'title':$scope.poll.title,
                 'width':400,
                 'height':300,
                  is3D: true

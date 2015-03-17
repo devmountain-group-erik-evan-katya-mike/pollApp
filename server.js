@@ -87,12 +87,35 @@ db.once('open', function (callback) {
 
 
         //socket.io start
-// io.on('connection', function(socket){
-// 	console.log('connected!')
-// 	socket.on('poll', function(options){
-// 	})
-// })
+
+//io.on('connection', function(socket){
+//    console.log('Connection made!')
+//
+//    socket.emit('connection')
+//
+//    socket.on('joinRoom', function(room){
+//        socket.join(room);
+//    });
+//
+//    socket.on('pollCreated', function(){
+//        io.to('mainRoom').emit('pollCreated');
+//    });
+//
+//    socket.on('joinRoom', function(room){
+//        socket.join(room);
+//
+//
+//        socket.on('voted', function(room){
+//            io.to(room).emit('voted')
+//            // socket.join('joinRoom', function(err, room){
+//            // 		io.sockets.to(room).emit('voted')
+//            // 	})
+//        })
+//    });
+//});
+
         //socket.io end
+
 
 
 app.get('/api/poll/:_id', pollCtrl.get);

@@ -146,7 +146,12 @@ input.ng-invalid.ng-dirty {
     float: right;
     margin-top: -27px;
     margin-left: 5px;
-    /*border-radius: 3px;*/
+}
+.activePollsButton {
+    display: inline-block;
+    float: right;
+    margin-right: 10px;
+    margin-bottom: 5px;
 }
 .col-md-4 {
     padding-right: 0;
@@ -163,7 +168,7 @@ input.ng-invalid.ng-dirty {
     color: #ffffff;
 }
 .panel {
-    border-radius: 5px;
+    /*border-radius: 5px;*/
 
 }
 .previewButton {
@@ -298,14 +303,12 @@ input.ng-invalid.ng-dirty {
 .activePollsAccordionBody {
     color: #000000
 }
-.activePollsRadius {
-    border-radius: 5px;
-}
+
 .accordTitle {
     margin-left: 4px;
     padding-top: 10px;
     display: inline-block;
-    color: #ffffff;
+    color: #000000;
 }
 .glyphiconActive {
     line-height: 0px;

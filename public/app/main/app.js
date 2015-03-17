@@ -1,9 +1,9 @@
 var app = angular.module("pollApp", ["ui.router", "myDirectives", "ui.bootstrap"]);
 
-app.config(function($stateProvider) {
+app.config(function($stateProvider, $urlRouterProvider) {
 
-    //$urlRouterProvider
-    //    .otherwise("/home");
+    $urlRouterProvider
+        .otherwise("/home");
 
     $stateProvider
         .state("home", {
@@ -45,7 +45,7 @@ app.config(function($stateProvider) {
         .state("pollResults", {
             url:"/poll/:id",
             templateUrl: "app/views/singlepollresults.html",
-            controller: 'pollResultCtrl',
+            controller: 'pollCtrl',
             resolve: {
                 poll: function(pollService, $stateParams){
                     console.log('in get poll results resolve');

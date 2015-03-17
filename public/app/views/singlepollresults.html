@@ -32,23 +32,29 @@
         <div class="bottomHeaderBorder"></div>
         <div class="pollLogo"><img src="./assets/images/Twitter-logo.png" class="loginImg">iePolls.com</div>
         <div class="centeredInput">
-            <div class="pollTemplateTitle">{{poll.title}} </div>
+            <!--<div class="pollTemplateTitle">{{poll.title}} </div>-->
             <div class="pollBody"></div>
-            <div class="radio" ng-repeat="choice in poll.choices">
-                <form>
-                    <label>
-                        <!--<input type="radio" name="finalVote" ng-model="$parent.selectedChoice">{{choice.body}}-->
-                        <input type="radio" name="pollChoices" ng-model="$parent.selectedVote" value="{{choice}}">{{choice.body}} {{choice.counter}}
-                        <br/>
-                    </label>
-                </form>
-            </div>
+            <!--<div class="radio" ng-repeat="choice in poll.choices">-->
+                <!--<form>-->
+                    <!--<label>-->
+                        <!--&lt;!&ndash;<input type="radio" name="finalVote" ng-model="$parent.selectedChoice">{{choice.body}}&ndash;&gt;-->
+                        <!--<input type="radio" name="pollChoices" ng-model="$parent.selectedVote" value="{{choice}}">{{choice.body}}-->
+                        <!--<br/>-->
+                    <!--</label>-->
+                <!--</form>-->
+            <!--</div>-->
+            <div class="pieChart" chart></div>
         </div>
 
         <div class="Vote"></div><div class="viewResultsTemplate"></div>
+
         <div class="voteView">
-            <!--<div><a ng-click="castVote()">Vote     </a>|<a ui-sref="viewResults">     View Results</a></div>-->
-        </div>
+
+            <!--<div><a ng-click="castVote()">Vote     </a>|<a ui-sref="#pollResults" data-toggle="modal">View Results</a></div>-->
+
+            <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://localhost:8080/#/poll/{{poll._id}}" data-text="Vote in my poll:" data-size="large" data-count="none" data-dnt="true">Tweet</a>
+
+            <div>Link to share: <pre>/#/poll/{{poll._id}}</pre></div>
         <div class="bottomHeaderBorder createPreviewBottomBorder"></div>
         <div class="pollBottomBorder"></div>
 
