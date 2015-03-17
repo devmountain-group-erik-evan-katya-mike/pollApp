@@ -119,10 +119,11 @@ db.once('open', function (callback) {
 
 
 app.get('/api/poll/:_id', pollCtrl.get);
-app.get('/api/poll/user/:_id', pollCtrl.getUserPolls);
-app.put('/api/poll/:_id', pollCtrl.put);
 app.post('/api/poll/', pollCtrl.post);
+app.put('/api/poll/:_id', pollCtrl.put);
+app.delete('/api/poll/:_id', pollCtrl.delete);
 
+app.get('/api/poll/user/:_id', pollCtrl.getUserPolls);
 
 
 
