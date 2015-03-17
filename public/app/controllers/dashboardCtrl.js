@@ -39,6 +39,7 @@ app.controller("dashboardCtrl", function($scope, $rootScope, dashboardService, a
         console.log(id)
         pollService.deletePoll(id).then(function(res) {
             console.log("Poll deleted");
+            $scope.getUserPolls();
         })
     }
 
