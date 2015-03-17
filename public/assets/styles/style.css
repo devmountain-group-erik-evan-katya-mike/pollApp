@@ -279,10 +279,15 @@ input.ng-invalid.ng-dirty {
 .progressVotes {
     width: 70%;
 }
-.pieChart {
-    margin: 0 auto;
 
+.pieResults {
+    margin-top: 25px;
+    background: #ffffff;
 }
+.pieChart {
+    margin-left: 25px;
+}
+
 .logoDesign {
     width: 50px;
     height: auto;

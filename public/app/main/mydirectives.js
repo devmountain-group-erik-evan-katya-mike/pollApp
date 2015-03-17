@@ -4,6 +4,10 @@ var app = angular.module("myDirectives", []);
 app.directive("chart", function() {
     return {
         restrict: 'A',
+        //scope: {
+        //    chartData: '='
+        //},
+
 
         link: function($scope, $elm, $attr) {
             // Create the data table.
@@ -30,6 +34,16 @@ app.directive("chart", function() {
                 var chart = new google.visualization.PieChart($elm[0]);
                 chart.draw(data, options);
             })
+
+            //$scope.$watch(function(scope){
+            //    return scope.chartData;
+            //}, function(oldVal, newVal){
+            //    data.addRows(
+            //        newVal
+            //    );
+            //    var chart = new google.visualization.PieChart($elm[0]);
+            //    chart.draw(data, options);
+            //})
 
 
 

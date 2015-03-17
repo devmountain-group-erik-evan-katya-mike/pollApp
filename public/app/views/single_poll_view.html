@@ -22,11 +22,11 @@
 
         <div class="voteView">
 
-        <div><a ng-click="castVote()">Vote     </a>|<a ui-sref="pollResults">     View Results</a></div>
+        <div><a ng-click="castVote()">Vote     </a>|<a ui-sref="pollResults({poll._id}})">     View Results</a></div><br />
 
         <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://localhost:8080/#/poll/{{poll._id}}" data-text="Vote in my poll:" data-size="large" data-count="none" data-dnt="true">Tweet</a>
 
-        <div>Link to share: <pre>/#/poll/{{poll._id}}</pre></div>
+        <div>Link to share: </br /><pre>/#/poll/{{poll._id}}</pre></div>
 
         </div>
     </div>

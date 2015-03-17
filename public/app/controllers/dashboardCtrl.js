@@ -2,11 +2,9 @@ var app = angular.module("pollApp");
 
 app.controller("dashboardCtrl", function($scope, $rootScope, dashboardService, authService, $state, pollService) {
 
-    $scope.userPolls;
 
-    console.log($scope.userPolls)
 
-    // var socket = io.connect();
+
 
     var updateUser = function(){
         authService.updateUser()
@@ -31,30 +29,17 @@ app.controller("dashboardCtrl", function($scope, $rootScope, dashboardService, a
        console.log("getUserPolls Function");
        pollService.getUserPolls($rootScope.user.id).then(function(res) {
            $scope.userPolls = res;
+           console.log($scope.userPolls)
 
 
        });
     };
 
-    $scope.deletePoll = function() {
-        pollService.deletePoll($scope.key._id).then(function(res) {
+    $scope.deletePoll = function(id) {
+        console.log(id)
+        pollService.deletePoll(id).then(function(res) {
             console.log("Poll deleted");
         })
     }
-
-    //$scope.getUserPolls();
-
-    function toggleChevron(e) {
-        $(e.target)
-            .prev('.panel-heading')
-            .find("i.indicator")
-            .toggleClass('glyphicon-chevron-down glyphicon-chevron-up');
-    }
-    $('#accordion').on('hidden.bs.collapse', toggleChevron);
-    $('#accordion').on('shown.bs.collapse', toggleChevron);
-
-
-
-
 
 })

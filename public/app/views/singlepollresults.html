@@ -25,11 +25,10 @@
 <!--</div>-->
 
 <!--<div class="container">-->
-<div class="col-md-4"></div>
+<div class="col-md-3"></div>
 <form>
-    <div class="col-md-4 createPollBox2">
-        <div class="pollTopBorder"></div>
-        <div class="bottomHeaderBorder"></div>
+    <div class="col-md-6 createPollBox2 pieResults">
+     <div class="well pieResults">
         <div class="pollLogo"><img src="./assets/images/Twitter-logo.png" class="loginImg">iePolls.com</div>
         <div class="centeredInput">
             <!--<div class="pollTemplateTitle">{{poll.title}} </div>-->
@@ -43,7 +42,7 @@
                     <!--</label>-->
                 <!--</form>-->
             <!--</div>-->
-            <div class="pieChart" chart></div>
+            <div class="pieChart" chart chartData="chartData"></div>
         </div>
 
         <div class="Vote"></div><div class="viewResultsTemplate"></div>
@@ -55,8 +54,7 @@
             <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://localhost:8080/#/poll/{{poll._id}}" data-text="Vote in my poll:" data-size="large" data-count="none" data-dnt="true">Tweet</a>
 
             <div>Link to share: <pre>/#/poll/{{poll._id}}</pre></div>
-        <div class="bottomHeaderBorder createPreviewBottomBorder"></div>
-        <div class="pollBottomBorder"></div>
+        </div>
 
 
     </div>
