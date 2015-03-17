@@ -1,12 +1,18 @@
 var app = angular.module("myDirectives", []);
 
+google.load('visualization', '1', {packages: ['corechart']});
+
+//google.setOnLoadCallback(function() {
+//    angular.bootstrap(document.body, []);
+//});
 
 app.directive("chart", function() {
     return {
         restrict: 'A',
-        //scope: {
-        //    chartData: '='
-        //},
+        scope: {
+            chartData: '=',
+            pollTitle: '@'
+        },
 
 
         link: function($scope, $elm, $attr) {
@@ -24,7 +30,7 @@ app.directive("chart", function() {
             //$scope.$apply(function(){
             //
             //});
-
+            console.log($scope.chartData);
             $scope.$watch(function(scope){
                 return scope.chartData;
             }, function(oldVal, newVal){
@@ -35,9 +41,7 @@ app.directive("chart", function() {
                 chart.draw(data, options);
             })
 
-            //$scope.$watch(function(scope){
-            //    return scope.chartData;
-            //}, function(oldVal, newVal){
+            //$scope.$watch("chartData", function(oldVal, newVal){
             //    data.addRows(
             //        newVal
             //    );
@@ -47,13 +51,12 @@ app.directive("chart", function() {
 
 
 
-            console.log("line 152", $scope.chartData);
             //data.addRows($scope.chartData);
 
 
             // Set chart options
             var options = {
-                'title':$scope.poll.title,
+                'title':$scope.pollTitle,
                 'width':400,
                 'height':300,
                  is3D: true
@@ -65,11 +68,7 @@ app.directive("chart", function() {
     }
 });
 
-google.load('visualization', '1', {packages: ['corechart']});
 
-google.setOnLoadCallback(function() {
-    angular.bootstrap(document.body, []);
-});
 
 
 

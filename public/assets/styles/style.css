@@ -285,7 +285,7 @@ input.ng-invalid.ng-dirty {
     background: #ffffff;
 }
 .pieChart {
-    margin-left: 25px;
+    margin: 0 auto;
 }
 
 .logoDesign {
