@@ -18,11 +18,17 @@
         </div>
         </div>
 
+
+<!--         <div class="btn btn-primary" ng-show="!selectedVote">View Results</div>
+        <br>
+        <div class="btn btn-primary" ng-show="selectedVote">Vote</div> -->
+
+
         <div class="Vote"></div><div class="viewResultsTemplate"></div>
 
         <div class="voteView">
 
-        <div><a ng-click="castVote()">Vote     </a>|<a ui-sref="pollResults({poll._id}})">     View Results</a></div><br />
+        <div><a ng-click="castVote()">Vote     </a>|<a ng-click="castVote()">     View Results</a></div><br />
 
         <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://localhost:8080/#/poll/{{poll._id}}" data-text="Vote in my poll:" data-size="large" data-count="none" data-dnt="true">Tweet</a>
 

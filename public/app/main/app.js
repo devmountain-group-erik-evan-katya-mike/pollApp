@@ -43,7 +43,7 @@ app.config(function($stateProvider, $urlRouterProvider) {
             }
         })
         .state("pollResults", {
-            url:"/poll/:id",
+            url:"/poll/results/:id",
             templateUrl: "app/views/singlepollresults.html",
             controller: 'pollCtrl',
             resolve: {
