@@ -178,6 +178,7 @@ input.ng-invalid.ng-dirty {
     height: 40px;
     color: #ffffff;
     padding: 0px;
+    cursor: pointer;
 }
 
 .pollTopBorder {
@@ -347,4 +348,10 @@ input.ng-valid.ng-dirty {
 }
 .chartLocation {
     margin-left: 100px;
+}
+
+.voteCount {
+    float: right;
+    padding-right: 5px;
+    padding-top: 5px;
 }
