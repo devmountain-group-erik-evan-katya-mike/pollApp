@@ -3,8 +3,6 @@ var app = angular.module('pollApp');
 app.service('pollService', function($http, $q, $state){
 
   this.getPoll = function(id){
-    //console.log('in getpoll service');
-    //console.log(id);
     var dfd = $q.defer();
     $http({
       method: 'GET',
@@ -64,6 +62,19 @@ app.service('pollService', function($http, $q, $state){
            dfd.reject(err);
        })
        return dfd.promise;
+    }
+
+    this.deletePoll = function(id) {
+        var dfd = $q.defer();
+        $http({
+            method: "DELETE",
+            url: 'api/poll'
+        }).then(function(res) {
+
+        }, function(err) {
+            dfd.reject(err);
+        })
+        return dfd.promise;
     }
 
 })

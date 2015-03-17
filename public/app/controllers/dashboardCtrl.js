@@ -36,6 +36,12 @@ app.controller("dashboardCtrl", function($scope, $rootScope, dashboardService, a
        });
     };
 
+    $scope.deletePoll = function() {
+        pollService.deletePoll($scope.key._id).then(function(res) {
+            console.log("Poll deleted");
+        })
+    }
+
     //$scope.getUserPolls();
 
     function toggleChevron(e) {
