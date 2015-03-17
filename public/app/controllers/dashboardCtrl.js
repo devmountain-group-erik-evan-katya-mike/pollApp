@@ -32,6 +32,7 @@ app.controller("dashboardCtrl", function($scope, $rootScope, dashboardService, a
        pollService.getUserPolls($rootScope.user.id).then(function(res) {
            $scope.userPolls = res;
 
+
        });
     };
 
@@ -46,7 +47,6 @@ app.controller("dashboardCtrl", function($scope, $rootScope, dashboardService, a
     $('#accordion').on('hidden.bs.collapse', toggleChevron);
     $('#accordion').on('shown.bs.collapse', toggleChevron);
 
-    $scope.accordion = null;
 
 
 

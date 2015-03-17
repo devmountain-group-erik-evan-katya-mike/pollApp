@@ -5,7 +5,7 @@ app.controller('pollCtrl', function($scope, $stateParams, $interval, poll, pollS
     $scope.poll = poll;
     console.log($scope.poll);
 
-  $scope.chartData = [];
+    $scope.chartData = [];
 
 
     var chartInfo = function() {
@@ -29,7 +29,7 @@ app.controller('pollCtrl', function($scope, $stateParams, $interval, poll, pollS
             .then(function(res){
                 console.log(res);
             })
-    }
+    };
 
     //<!------------------------>
 
@@ -47,47 +47,30 @@ app.controller('pollCtrl', function($scope, $stateParams, $interval, poll, pollS
     //}
     //
     //$interval(updateCount, 1000)
+
+//$scope.userPolls;
+//
+//$scope.getUserPolls = function() {
+//    console.log($rootScope.user);
+//    console.log("getUserPolls Function");
+//    pollService.getUserPolls($rootScope.user.id).then(function(res) {
+//        $scope.userPolls = res;
+//
+//    });
+//};
+//
+//$scope.getUserPolls();
+
 });
 
 
-//app.directive("chart", function() {
-//    return {
-//        restrict: 'A',
-//        //scope: {
-//        //        chartPoll: '='
-//        //    },
+
 //
-//        link: function($scope, $elm, $attr) {
-//            // Create the data table.
-//            var data = new google.visualization.DataTable();
-//            data.addColumn('string', 'Choices');
-//            data.addColumn('number', 'Votes');
-//            data.addRows([
-//                ['College',3],
-//                ['Onions', 1],
-//                ['Olives', 1],
-//                ['Zucchini', 1],
-//                ['Pepperoni', 2]
-//            ]);
-//            console.log("line 152", $scope.chartData);
-//            data.addRows($scope.chartData);
-//
-//
-//            // Set chart options
-//            var options = {'title':$scope.poll.title,
-//                'width':400,
-//                'height':300};
-//
-//            // Instantiate and draw our chart, passing in some options.
-//            var chart = new google.visualization.PieChart($elm[0]);
-//            chart.draw(data, options);
-//        }
-//    }
-//});
-//
-//
-//    google.load('visualization', '1', {packages: ['corechart']});
-//
-//google.setOnLoadCallback(function() {
-//    angular.bootstrap(document.body, []);
-//});
+//function toggleChevron(e) {
+//    $(e.target)
+//        .prev('.panel-heading')
+//        .find("i.indicator")
+//        .toggleClass('glyphicon-chevron-down glyphicon-chevron-up');
+//}
+//$('#accordion').on('hidden.bs.collapse', toggleChevron);
+//$('#accordion').on('shown.bs.collapse', toggleChevron);

@@ -12,9 +12,7 @@
         <div class="radio" ng-repeat="choice in poll.choices">
             <form>
             <label>
-                <!--<input type="radio" name="finalVote" ng-model="$parent.selectedChoice">{{choice.body}}-->
                 <input type="radio" name="pollChoices" ng-model="$parent.selectedVote" value="{{choice}}">{{choice.body}}
-
                 <br/>
             </label>
             </form>
@@ -25,7 +23,7 @@
 
         <div class="voteView">
 
-        <div><a ng-click="castVote()">Vote     </a>|<a href="#myModal" data-toggle="modal">     View Results</a></div>
+        <div><a ng-click="castVote()">Vote     </a>|<a ui-sref="pollResults">     View Results</a></div>
 
         <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://localhost:8080/#/poll/{{poll._id}}" data-text="Vote in my poll:" data-size="large" data-count="none" data-dnt="true">Tweet</a>
 
@@ -33,27 +31,27 @@
 
             <!-- start of Modal -->
 
-            <div class="modal fade" id="myModal">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <button class="close" data-dismiss="modal">&times;</button><br/>
-                            <div class="pollTopBorder"></div>
-                            <div class="bottomHeaderBorder"></div>
-                            <h4 class="modal-title"><div class="pollLogo"><img src="./assets/images/Twitter-logo.png" class="loginImg">iePolls.com</div></h4>
-                            <div class="modal-body chartLocation">
-                                <!--<h4>{{poll.title}}</h4>-->
-                                <span ng-repeat="choice in poll.choices"></span>
-                                    <!--<h3>{{choice.body}}</h3>-->
-                                    <div class="pieChart" chart></div>
+            <!--<div class="modal fade" id="myModal">-->
+                <!--<div class="modal-dialog">-->
+                    <!--<div class="modal-content">-->
+                        <!--<div class="modal-header">-->
+                            <!--<button class="close" data-dismiss="modal">&times;</button><br/>-->
+                            <!--<div class="pollTopBorder"></div>-->
+                            <!--<div class="bottomHeaderBorder"></div>-->
+                            <!--<h4 class="modal-title"><div class="pollLogo"><img src="./assets/images/Twitter-logo.png" class="loginImg">iePolls.com</div></h4>-->
+                            <!--<div class="modal-body chartLocation">-->
+                                <!--&lt;!&ndash;<h4>{{poll.title}}</h4>&ndash;&gt;-->
+                                <!--<span ng-repeat="choice in poll.choices"></span>-->
+                                    <!--&lt;!&ndash;<h3>{{choice.body}}</h3>&ndash;&gt;-->
+                                    <!--<div class="pieChart" chart></div>-->
 
 
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                            <!--</div>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                <!--</div>-->
 
-            </div>
+            <!--</div>-->
 
             <!-- end of Modal -->
 
