@@ -68,9 +68,9 @@ app.service('pollService', function($http, $q, $state){
         var dfd = $q.defer();
         $http({
             method: "DELETE",
-            url: 'api/poll'
+            url: 'api/poll/' + id
         }).then(function(res) {
-
+            dfd.resolve(res);
         }, function(err) {
             dfd.reject(err);
         })

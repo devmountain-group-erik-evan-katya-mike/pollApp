@@ -121,7 +121,7 @@ db.once('open', function (callback) {
 app.get('/api/poll/:_id', pollCtrl.get);
 app.post('/api/poll/', pollCtrl.post);
 app.put('/api/poll/:_id', pollCtrl.put);
-app.delete('/api/poll/:_id', pollCtrl.delete);
+app.delete('/api/poll/:_id', isAuthed, pollCtrl.delete);
 
 app.get('/api/poll/user/:_id', pollCtrl.getUserPolls);
 
