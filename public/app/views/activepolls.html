@@ -13,27 +13,9 @@
                         </div>
                     </div>
 
-                  <!--<accordion close-others="true" ng-repeat="key in userPolls" class="panel-heading">-->
-                      <!--<accordion-group is-open="isopen" class="panel-primary" id="accordion">-->
-                          <!--<accordion-heading class="panel panel-heading">-->
 
-                              <!--<div class="panel-title">-->
-                                <!--<a href="" ><div class="accordTitle">{{key.title}}</div></a><div class="glyphIcon"><i class="indicator glyphiconActive glyphicon glyphicon-chevron-down  pull-right"></i></div>-->
-                              <!--</div>-->
-                          <!--</accordion-heading>-->
-
-                          <!--<div class="radio panel-body activePollsAccordionBody" ng-repeat="nestedKey in key.choices">-->
-                              <!--<label>-->
-                                  <!--<input type="radio" ng-model="choices"  disabled>{{nestedKey.body}} {{nestedKey.counter}}-->
-                              <!--</label>-->
-                          <!--</div>-->
-                          <!--<div class="pieChart" chart></div>-->
-                        <!--<button class="createButton btn btn-primary btn-xs"><a ui-sref="poll">View Poll</a></button>-->
-                      <!--</accordion-group>-->
-                  <!--</accordion>-->
-
-                    <accordion close-others="true" ng-repeat="key in userPolls | limitTo: 10 | orderBy: '-createdAt'">
-                        <accordion-group is-open="isopen" class="panel panel-default" id="accordion">
+                    <accordion  close-others="true" ng-repeat="key in userPolls | limitTo: 10 | orderBy: '-createdAt'">
+                        <accordion-group is-open="key.open" class="panel panel-default" id="accordion">
                             <accordion-heading class="panel panel-heading">
 
                                 <div class="panel-title">
@@ -59,7 +41,11 @@
                 </div>
             </div>
          </div>
-        <div class="col-md-6"></div>
+        <div class="col-md-6">
+            <!--<div ng-repeat="key in userPolls">-->
+            <!--<div class="pieChart" chart chart-data="activeChartData" poll-title="{{key.title}}"></div>-->
+            <!--</div>-->
+        </div>
 
 </div>
 

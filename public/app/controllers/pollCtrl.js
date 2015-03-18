@@ -48,29 +48,5 @@ app.controller('pollCtrl', function($scope, $stateParams, $interval, poll, pollS
     //
     //$interval(updateCount, 1000)
 
-//$scope.userPolls;
-//
-//$scope.getUserPolls = function() {
-//    console.log($rootScope.user);
-//    console.log("getUserPolls Function");
-//    pollService.getUserPolls($rootScope.user.id).then(function(res) {
-//        $scope.userPolls = res;
-//
-//    });
-//};
-//
-//$scope.getUserPolls();
-
 });
 
-
-
-//
-//function toggleChevron(e) {
-//    $(e.target)
-//        .prev('.panel-heading')
-//        .find("i.indicator")
-//        .toggleClass('glyphicon-chevron-down glyphicon-chevron-up');
-//}
-//$('#accordion').on('hidden.bs.collapse', toggleChevron);
-//$('#accordion').on('shown.bs.collapse', toggleChevron);

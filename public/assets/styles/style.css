@@ -289,9 +289,13 @@ input.ng-invalid.ng-dirty {
 }
 
 .logoDesign {
-    width: 50px;
+    /*width: 50px;*/
+    /*height: auto;*/
+    /*padding-top: 5px;*/
+
+    width: 85px;
     height: auto;
-    padding-top: 5px;
+
 }
 .voteViewLay {
     text-align: center;

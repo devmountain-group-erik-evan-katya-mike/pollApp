@@ -2,15 +2,13 @@ var app = angular.module("pollApp");
 
 app.controller("dashboardCtrl", function($scope, $rootScope, dashboardService, authService, $state, pollService) {
 
-
-
-
+    $scope.userPolls
 
     var updateUser = function(){
         authService.updateUser()
             .then(function(data){
                 $rootScope.user = data;
-                console.log('root scope user: ', $rootScope.user);
+
             })
     };
     updateUser();
@@ -26,11 +24,9 @@ app.controller("dashboardCtrl", function($scope, $rootScope, dashboardService, a
     
     $scope.getUserPolls = function() {
        console.log($rootScope.user);
-       console.log("getUserPolls Function");
        pollService.getUserPolls($rootScope.user.id).then(function(res) {
            $scope.userPolls = res;
-           console.log($scope.userPolls)
-
+            console.log($scope.userPolls)
 
        });
     };
@@ -41,6 +37,20 @@ app.controller("dashboardCtrl", function($scope, $rootScope, dashboardService, a
             console.log("Poll deleted");
             $scope.getUserPolls();
         })
-    }
+    };
 
-})
+
+
+    //var activeChartInfo = function() {
+    //    var newChartData = [];
+    //    for (var i = 0; i < $scope.userPolls.length; i++) {
+    //        var newArr = [];
+    //        newArr.push($scope.userPolls.choices[i].body, $scope.userPolls.choices[i].counter);
+    //        newChartData.push(newArr);
+    //    }
+    //    $scope.activeChartData = newChartData;
+    //    console.log($scope.activeChartData);
+    //}
+    //activeChartInfo();
+
+});
