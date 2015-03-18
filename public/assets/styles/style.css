@@ -195,10 +195,22 @@ input.ng-invalid.ng-dirty {
     margin-right: 1%;
 }
 .pollLogo {
-    font-family: 'Arial', 'helvetia', serif;
-    font-size: 22px;
-    height: 40px;
+    /*font-family: 'Arial', 'helvetia', serif;
+    font-size: 22px;*/
+    height: 50px;
+    width: auto;
     text-align: center;
+    margin-left: 0%;
+}
+.pollLogoo {
+    margin: 0 auto;
+    display: inline-block;
+    margin-left: 25%;
+}
+.pollLogooo {
+    margin: 0 auto;
+    display: inline-block;
+    margin-left: 35%;
 }
 .pollTemplateTitle {
     font-size: 18px;
@@ -293,8 +305,10 @@ input.ng-invalid.ng-dirty {
     /*height: auto;*/
     /*padding-top: 5px;*/
 
-    width: 85px;
-    height: auto;
+    width: auto;
+    height: 40px;
+    margin-top: -15px;
+    margin-left: -8px;
 
 }
 .voteViewLay {
@@ -379,4 +393,12 @@ input.ng-valid.ng-dirty {
 
 .badge {
     margin-top: 8px;
+}
+
+video#bgvid {
+    margin-top: 5%;
+
+width: 100%; height: auto; z-index: -100;
+background: url(polina.jpg) no-repeat;
+background-size: cover;
 }
