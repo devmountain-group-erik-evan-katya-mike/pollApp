@@ -16,7 +16,6 @@ app.directive("chart", function() {
 
 
         link: function($scope, $elm, $attr) {
-            // Create the data table.
             var data = new google.visualization.DataTable();
             data.addColumn('string', 'Choices');
             data.addColumn('number', 'Votes');
@@ -27,10 +26,7 @@ app.directive("chart", function() {
             //    ['Zucchini', 1],
             //    ['Pepperoni', 2]
             //]);
-            //$scope.$apply(function(){
-            //
-            //});
-            console.log($scope.chartData);
+
             $scope.$watch(function(scope){
                 return scope.chartData;
             }, function(oldVal, newVal){
@@ -39,31 +35,14 @@ app.directive("chart", function() {
                 );
                 var chart = new google.visualization.PieChart($elm[0]);
                 chart.draw(data, options);
-            })
+            });
 
-            //$scope.$watch("chartData", function(oldVal, newVal){
-            //    data.addRows(
-            //        newVal
-            //    );
-            //    var chart = new google.visualization.PieChart($elm[0]);
-            //    chart.draw(data, options);
-            //})
-
-
-
-            //data.addRows($scope.chartData);
-
-
-            // Set chart options
             var options = {
                 'title':$scope.pollTitle,
                 'width':400,
                 'height':300,
                  is3D: true
             };
-
-            // Instantiate and draw our chart, passing in some options.
-
         }
     }
 });
