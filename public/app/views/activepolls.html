@@ -20,13 +20,13 @@
 
                                 <div class="panel-title">
                                     <div class="accordTitle">{{key.title}}</div>
-                                    <div class="voteCount"><span class="badge">42</span></div>
+                                    <div class="voteCount"><span class="badge">{{key.totalVotes}}</span></div>
                                 </div>
                             </accordion-heading>
 
                             <div class="radio panel-body activePollsAccordionBody" ng-repeat="nestedKey in key.choices">
                                 <label>
-                                    <input type="radio" ng-model="choices"  disabled>{{nestedKey.body}} {{nestedKey.counter}}
+                                    <input type="radio" ng-model="choices"  disabled>{{nestedKey.body}} <span class="badge">{{nestedKey.counter}}</span>
                                 </label>
                             </div>
                             <button class="activePollsButton btn btn-info btn-xs"><a href="/#/poll/{{key._id}}">View Poll</a></button>
