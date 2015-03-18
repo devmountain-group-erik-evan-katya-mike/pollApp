@@ -27,6 +27,7 @@ app.controller("dashboardCtrl", function($scope, $rootScope, dashboardService, a
        pollService.getUserPolls($rootScope.user.id).then(function(res) {
            $scope.userPolls = res;
             console.log($scope.userPolls)
+            //activeChartInfo();
 
        });
     };
@@ -38,6 +39,8 @@ app.controller("dashboardCtrl", function($scope, $rootScope, dashboardService, a
             $scope.getUserPolls();
         })
     };
+
+    $scope.oneAtATime = true;
 
 
 
@@ -51,6 +54,5 @@ app.controller("dashboardCtrl", function($scope, $rootScope, dashboardService, a
     //    $scope.activeChartData = newChartData;
     //    console.log($scope.activeChartData);
     //}
-    //activeChartInfo();
 
 });

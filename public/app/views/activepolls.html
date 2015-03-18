@@ -8,29 +8,70 @@
                     <div class="panel panel-default">
                         <div class="panel-heading">
                             <div class="panel-title">
-                                <div class="activePollsHeader accordTitle">Active Polls</div><div class="totalVotesHeading accordTitle">Total Votes</div>
+                               <strong><div class="activePollsHeader accordTitle">Active Polls</div><div class="totalVotesHeading accordTitle">Total Votes</div></strong>
                             </div>
                         </div>
                     </div>
 
 
-                    <accordion  close-others="true" ng-repeat="key in userPolls | limitTo: 10 | orderBy: '-createdAt'">
-                        <accordion-group is-open="key.open" class="panel panel-default" id="accordion">
+                    <!--<accordion  close-others="oneAtATime" ng-repeat="key in userPolls | limitTo: 10 | orderBy: '-createdAt'">-->
+                        <!--<accordion-group is-open="true" class="panel panel-default" id="accordion">-->
+                            <!--<accordion-heading class="panel panel-heading">-->
+
+                                <!--<div class="panel-title">-->
+                                    <!--<div class="accordTitle">{{key.title}}</div>-->
+                                    <!--<div class="voteCount"><span class="badge">{{key.totalVotes}}</span></div>-->
+                                <!--</div>-->
+                            <!--</accordion-heading>-->
+
+                            <!--<div class="radio panel-body activePollsAccordionBody" ng-repeat="nestedKey in key.choices">-->
+                                <!--<label>-->
+                                    <!--<table class="table table-striped">-->
+                                        <!--<tr>-->
+                                            <!--<td class="cellAlign">-->
+                                                <!--&lt;!&ndash;<h4><input type="radio" ng-model="choices"  disabled>{{nestedKey.body}}</h4>&ndash;&gt;-->
+                                                <!--<h5> - {{nestedKey.body}}</h5>-->
+                                            <!--</td>-->
+                                            <!--<td>-->
+                                                <!--<span class="badge counterFloat">{{nestedKey.counter}}</span>-->
+                                            <!--</td>-->
+                                        <!--</tr>-->
+                                    <!--</table>-->
+                                   <!--&lt;!&ndash;<h4><input type="radio" ng-model="choices"  disabled>{{nestedKey.body}}</h4> <span class="badge">{{nestedKey.counter}}</span>&ndash;&gt;-->
+                                <!--</label>-->
+                            <!--</div>-->
+                            <!--<button class="activePollsButton btn btn-primary btn-xs"><a href="/#/poll/{{key._id}}">View Poll</a></button>-->
+                            <!--<button class="activePollsButton btn btn-primary btn-xs"><a href="" ng-click="deletePoll(key._id)"> Delete Poll</a></button>-->
+                        <!--</accordion-group>-->
+                    <!--</accordion>-->
+
+                    <accordion  close-others="oneAtATime" >
+                        <accordion-group class="panel panel-default" ng-repeat="key in userPolls | limitTo: 10 | orderBy: '-createdAt'">
                             <accordion-heading class="panel panel-heading">
 
                                 <div class="panel-title">
-                                    <div class="accordTitle">{{key.title}}</div>
+                                    <div class="accordTitle"><strong>{{key.title}}</strong></div>
                                     <div class="voteCount"><span class="badge">{{key.totalVotes}}</span></div>
                                 </div>
                             </accordion-heading>
 
                             <div class="radio panel-body activePollsAccordionBody" ng-repeat="nestedKey in key.choices">
-                                <label>
-                                    <input type="radio" ng-model="choices"  disabled>{{nestedKey.body}} <span class="badge">{{nestedKey.counter}}</span>
-                                </label>
+
+
+                                            <div class="cellAlign">
+                                                <!--<h4><input type="radio" ng-model="choices"  disabled>{{nestedKey.body}}</h4>-->
+                                                <h5>{{nestedKey.body}}</h5>
+                                            </div>
+                                            <div class="counterFloat">
+                                                <span class="badge counterFloat">{{nestedKey.counter}}</span>
+                                            </div>
+
+
+                                    <!--<h4><input type="radio" ng-model="choices"  disabled>{{nestedKey.body}}</h4> <span class="badge">{{nestedKey.counter}}</span>-->
+
                             </div>
-                            <button class="activePollsButton btn btn-info btn-xs"><a href="/#/poll/{{key._id}}">View Poll</a></button>
-                            <button class="activePollsButton btn btn-info btn-xs"><a href="" ng-click="deletePoll(key._id)"> Delete Poll</a></button>
+                            <button class="activePollsButton btn btn-primary btn-xs"><a href="/#/poll/{{key._id}}">View Poll</a></button>
+                            <button class="activePollsButton btn btn-primary btn-xs"><a href="" ng-click="deletePoll(key._id)"> Delete Poll</a></button>
                         </accordion-group>
                     </accordion>
 
@@ -45,7 +86,7 @@
             <!--<div ng-repeat="key in userPolls">-->
             <!--<div class="pieChart" chart chart-data="activeChartData" poll-title="{{key.title}}"></div>-->
             <!--</div>-->
-        </div>
+        <!--</div>-->
 
 </div>
 

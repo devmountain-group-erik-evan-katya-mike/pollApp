@@ -319,6 +319,7 @@ input.ng-invalid.ng-dirty {
     padding-top: 10px;
     display: inline-block;
     color: #000000;
+
 }
 .glyphiconActive {
     line-height: 0px;
@@ -363,4 +364,19 @@ input.ng-valid.ng-dirty {
     float: right;
     padding-right: 5px;
     padding-top: 5px;
+}
+.counterFloat {
+    float: right;
+    display: inline-block;
+    margin-top: 10px;
+    margin-right: 5px;
+
+}
+.cellAlign {
+    display: inline-block;
+
+}
+
+.badge {
+    margin-top: 8px;
 }
