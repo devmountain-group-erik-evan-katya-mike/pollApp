@@ -32,7 +32,7 @@ passport.deserializeUser(function(obj, done) {
 passport.use(new TwitterStrategy({
 	consumerKey: config.twitter_key,
 	consumerSecret: config.twitter_secret,
-	callbackURL: 'http://localhost:8080/auth/twitter/callback'
+	callbackURL: config.twitterURL
   }, 
   function(token, tokenSecret, profile, done) {
     // asynchronous verification, for effect...
