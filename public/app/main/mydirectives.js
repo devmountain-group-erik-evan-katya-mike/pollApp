@@ -16,9 +16,7 @@ app.directive("chart", function() {
 
 
         link: function($scope, $elm, $attr) {
-            var data = new google.visualization.DataTable();
-            data.addColumn('string', 'Choices');
-            data.addColumn('number', 'Votes');
+
             //data.addRows([
             //    ['College',3],
             //    ['Onions', 1],
@@ -30,6 +28,10 @@ app.directive("chart", function() {
             $scope.$watch(function(scope){
                 return scope.chartData;
             }, function(oldVal, newVal){
+                console.log(newVal)
+                var data = new google.visualization.DataTable();
+                data.addColumn('string', 'Choices');
+                data.addColumn('number', 'Votes');
                 data.addRows(
                     newVal
                 );
@@ -43,6 +45,7 @@ app.directive("chart", function() {
                 'height':300,
                  is3D: true
             };
+
         }
     }
 });
