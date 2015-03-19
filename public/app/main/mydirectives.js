@@ -25,10 +25,21 @@ app.directive("chart", function() {
             //    ['Pepperoni', 2]
             //]);
 
-            $scope.$watch(function(scope){
-                return scope.chartData;
-            }, function(oldVal, newVal){
-                console.log(newVal)
+            //$scope.$watch(function(scope){
+            //    return scope.chartData;
+            //}, function(oldVal, newVal){
+            //    var data = new google.visualization.DataTable();
+            //    data.addColumn('string', 'Choices');
+            //    data.addColumn('number', 'Votes');
+            //    data.addRows(
+            //        newVal
+            //    );
+            //    var chart = new google.visualization.PieChart($elm[0]);
+            //    chart.draw(data, options);
+            //});
+
+            $scope.$watch("chartData",
+                function(oldVal, newVal){
                 var data = new google.visualization.DataTable();
                 data.addColumn('string', 'Choices');
                 data.addColumn('number', 'Votes');
@@ -38,7 +49,6 @@ app.directive("chart", function() {
                 var chart = new google.visualization.PieChart($elm[0]);
                 chart.draw(data, options);
             });
-
             var options = {
                 'title':$scope.pollTitle,
                 'width': 375,

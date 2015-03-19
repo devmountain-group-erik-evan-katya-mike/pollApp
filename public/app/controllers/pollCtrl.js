@@ -3,7 +3,7 @@ var app = angular.module('pollApp');
 app.controller('pollCtrl', function($scope, $stateParams, $interval, poll, pollService) {
 
     $scope.poll = poll;
-    console.log($scope.poll);
+    console.log(poll);
 
     $scope.chartData = [];
 
@@ -22,11 +22,10 @@ app.controller('pollCtrl', function($scope, $stateParams, $interval, poll, pollS
 
 
     $scope.castVote = function(){
-        console.log($scope.selectedVote);
-        console.log($stateParams.id);
+
         pollService.castVote($stateParams.id, $scope.selectedVote)
             .then(function(res){
-                console.log(res);
+
             })
     };
 
@@ -38,13 +37,12 @@ app.controller('pollCtrl', function($scope, $stateParams, $interval, poll, pollS
         pollService.getPoll($stateParams.id)
             .then(function(res){
                 counter++;
-                //console.log('Updating poll counts. Number of times fetched: ', counter);
                 $scope.poll = res;
             })
     }
     
-    $interval(updateCount, 1500);
-    $interval(chartInfo, 1250);
+    $interval(updateCount, 900);
+    $interval(chartInfo, 800);
 
     app.directive('back', ['$window', function($window) {
         return {
@@ -56,6 +54,7 @@ app.controller('pollCtrl', function($scope, $stateParams, $interval, poll, pollS
             }
         };
     }]);
+
 
 });
 

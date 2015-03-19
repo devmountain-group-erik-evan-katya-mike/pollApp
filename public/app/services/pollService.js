@@ -8,14 +8,22 @@ app.service('pollService', function($http, $q, $state){
       method: 'GET',
       url: '/api/poll/' + id
     }).then(function(res){
-      //console.log(res.data);
+
+        var poll = res.data;
+            var totalVotes = 0;
+            for (var i = 0; i < poll.choices.length; i++) {
+                totalVotes += poll.choices[i].counter;
+
+            };
+            poll.totalVotes = totalVotes;
+
+
       dfd.resolve(res.data);
     })
     return dfd.promise;
   }
 
   this.castVote = function(id, choice){
-      console.log(choice)
     var dfd = $q.defer();
     $http({
       method: 'PUT',
