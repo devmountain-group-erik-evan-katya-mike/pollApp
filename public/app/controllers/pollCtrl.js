@@ -45,7 +45,8 @@ app.controller('pollCtrl', function($scope, $stateParams, $interval, poll, pollS
             })
     }
     
-    $interval(updateCount, 1000)
+    $interval(updateCount, 1500);
+    $interval(chartInfo, 1250);
 
     app.directive('back', ['$window', function($window) {
         return {
