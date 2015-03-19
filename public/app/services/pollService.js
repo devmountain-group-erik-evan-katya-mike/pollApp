@@ -49,21 +49,17 @@ app.service('pollService', function($http, $q, $state){
     }
 
     this.getUserPolls = function(id) {
-       console.log(id);
+
        var dfd = $q.defer();
        $http({
            method: "GET",
            url: '/api/poll/user/' +id
        }).then(function(res) {
-           console.log('get user polls data: ', res.data);
            var arr = res.data;
-           console.log('arr', arr);
            for (var i = 0; i < arr.length; i++) {
              var totalVotes = 0;
              for (var j = 0; j < arr[i].choices.length; j++) {
-               console.log("Counter value: ", arr[i].choices[j].counter);
                totalVotes += arr[i].choices[j].counter;
-               console.log('Total votes: ', totalVotes);
              };
              arr[i].totalVotes = totalVotes;
            };

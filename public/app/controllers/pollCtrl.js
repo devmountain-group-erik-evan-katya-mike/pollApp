@@ -16,7 +16,6 @@ app.controller('pollCtrl', function($scope, $stateParams, $interval, poll, pollS
             newChartData.push(newArr);
         }
         $scope.chartData = newChartData;
-        console.log($scope.chartData);
     }
 
     chartInfo();
@@ -41,7 +40,6 @@ app.controller('pollCtrl', function($scope, $stateParams, $interval, poll, pollS
                 counter++;
                 //console.log('Updating poll counts. Number of times fetched: ', counter);
                 $scope.poll = res;
-                console.log($scope.poll);
             })
     }
     
