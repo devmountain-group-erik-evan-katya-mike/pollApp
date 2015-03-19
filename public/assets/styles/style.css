@@ -57,8 +57,9 @@ button a {
 .dashboardLinks {
     display: inline-block;
     margin-left: 15px;
-    padding-top: 30px;
+    padding-top: 20px;
     float:left;
+    padding-bottom: 35px;
 }
 .dashboardView {
     background: #ffffff;
@@ -202,9 +203,7 @@ input.ng-invalid.ng-dirty {
     margin: 0 auto;
 }
 .pollLogoo {
-
-    display: inline-block;
-    margin-left: 25%;
+    display: flex;
 
 }
 .pollLogooo {
