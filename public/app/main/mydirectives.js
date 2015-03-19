@@ -39,7 +39,7 @@ app.directive("chart", function() {
 
             var options = {
                 'title':$scope.pollTitle,
-                'width':310,
+                'width': 375,
                 'height':300,
                  is3D: true
             };

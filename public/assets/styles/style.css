@@ -124,6 +124,7 @@ input.ng-invalid.ng-dirty {
 .activePollsHeader {
     display: inline-block;
     color: #ffffff;
+    margin-bottom: 5px;
 }
 
 .createPollBox {
