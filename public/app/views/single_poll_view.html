@@ -1,5 +1,3 @@
-<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
-
 <div class="col-md-4"></div>
 <form>
     <div class="col-md-4 createPollBox2">
@@ -30,7 +28,9 @@
 
         <div><a href="" ng-click="castVote()">Vote     </a>|<a href="" ng-click="castVote()">     View Results</a></div><br />
 
-        <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://tweetpoll.me/#/poll/{{poll._id}}" data-text="Vote in my poll:" data-size="large" data-count="none" data-dnt="true">Tweet</a>
+        <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://tweetpoll.me/#/poll/{{poll._id}}" data-text="Vote in my poll: {{poll.title}}" data-size="large" data-count="none" data-dnt="true">Tweet</a>
+
+        <script src="https://platform.twitter.com/widgets.js"></script>
 
         <div>Link to share: </br /><pre>tweetpoll.me/#/poll/{{poll._id}}</pre></div>
 
@@ -40,3 +40,4 @@
 </form>
 
 
+<!-- <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>  -->
