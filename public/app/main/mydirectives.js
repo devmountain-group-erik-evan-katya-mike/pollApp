@@ -28,7 +28,6 @@ app.directive("chart", function() {
             $scope.$watch(function(scope){
                 return scope.chartData;
             }, function(oldVal, newVal){
-                console.log(newVal)
                 var data = new google.visualization.DataTable();
                 data.addColumn('string', 'Choices');
                 data.addColumn('number', 'Votes');

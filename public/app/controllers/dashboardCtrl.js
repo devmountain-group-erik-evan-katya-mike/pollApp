@@ -23,10 +23,9 @@ app.controller("dashboardCtrl", function($scope, $rootScope, dashboardService, a
     };
     
     $scope.getUserPolls = function() {
-       console.log($rootScope.user);
+
        pollService.getUserPolls($rootScope.user.id).then(function(res) {
            $scope.userPolls = res;
-            console.log($scope.userPolls)
             //activeChartInfo();
 
        });
