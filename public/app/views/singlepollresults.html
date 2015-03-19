@@ -44,18 +44,18 @@
             <!--</div>-->
             <div class="pieChart" chart chart-data="chartData" poll-title="{{poll.title}}"></div>
         </div>
-
         <div class="Vote"></div><div class="viewResultsTemplate"></div>
 
         <div class="voteView">
 
-            <!--<div><a ng-click="castVote()">Vote     </a>|<a ui-sref="#pollResults" data-toggle="modal">View Results</a></div>-->
 
+            <!--<div><a ng-click="castVote()">Vote     </a>|<a ui-sref="#pollResults" data-toggle="modal">View Results</a></div>-->
+            <div class="totalVotes">Total Votes: {{poll.totalVotes}}</div>
             <div>Link to share: </br /><pre>tweetpoll.me/#/poll/{{poll._id}}</pre></div>
             <div class="backToPoll"><a href="/#/poll/{{poll._id}}">Back to Voting</a></div>
         </div>
 
-
+    </div>
     </div>
 </form>
 <!--</div>-->
