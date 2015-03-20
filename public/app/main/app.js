@@ -48,7 +48,6 @@ app.config(function($stateProvider, $urlRouterProvider) {
             controller: 'pollCtrl',
             resolve: {
                 poll: function(pollService, $stateParams){
-                    console.log('in get poll results resolve');
                     return pollService.getPoll($stateParams.id);
                 }
             }

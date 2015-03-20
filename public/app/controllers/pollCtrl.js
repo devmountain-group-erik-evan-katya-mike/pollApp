@@ -3,7 +3,7 @@ var app = angular.module('pollApp');
 app.controller('pollCtrl', function($scope, $stateParams, $interval, poll, pollService) {
 
     $scope.poll = poll;
-    console.log(poll);
+
 
     $scope.chartData = [];
 
